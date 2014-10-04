@@ -1,13 +1,14 @@
 \documentclass[a4paper, titlepage, oneside]{article}
-\usepackage[vmargin=2cm,hmargin=2cm]{geometry}
-\usepackage{amsmath,amssymb} % mathematical markup
-\usepackage{graphicx,epstopdf,listings,csvsimple,float,xcolor}
-\usepackage[allcolors=blue,colorlinks=true]{hyperref}
+\usepackage[australian]{babel}
+\usepackage{csquotes}
+\usepackage[vmargin = 2cm, hmargin = 2cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx, epstopdf, listings, csvsimple, float, xcolor}
+\usepackage[allcolors = blue, colorlinks = true]{hyperref}
 \usepackage{multicol}
-\usepackage{gensymb}
 \usepackage{wasysym}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
-
+\usepackage[cdot, amssymb]{siunits}
 
 % listings, xcolor
 \lstset{language=Matlab,
@@ -20,9 +21,15 @@
     aboveskip=0pt,
     belowskip=20pt}
 
+% Bibliography setup
+\renewcommand{\nameyeardelim}{\addcomma\addspace} % Change delimiter for in-line citations to include a comma
+\addbibresource{group-report.bib}
+
+% babel   : set language, for packages that need it
+% csquotes  : context-sensitive quotes
 % geometry  : page margins
 % amsmath : maths
-% amssymb : maths
+% amssymb : maths (\square redefined by siunits)
 % graphicx  : \includegraphic
 % epstopdf  : use of eps files in document
 % hyperref  : in-document links
@@ -30,13 +37,9 @@
 % csvsimple : import csv tables
 % float   : float graphics
 % xcolor  : use colour formatting
-% gensymb : \degree, \celsius, \micro, \ohm
 % wasysym : \astrosun (conflict with amssymb)
 % biblatex : bibliography
-
-% Bibliography setup
-\renewcommand{\nameyeardelim}{\addcomma\addspace} % Change delimiter for in-line citations to include a comma
-\addbibresource{group-report.bib}
+% siunits : management of SI units; encourage using \unit{value}{units} command whenever possible
 
 % Custom commands
 \newcommand{\elem}[2]{\textsuperscript{#1}{#2}}
@@ -46,8 +49,8 @@
 \begin{document}
 \title{\textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes.}}
 \author{A.~K. Child \and C.~M. Roe-Simons \and K.~T. Leaver \and H.~D. Poulter \and R.~M. Harvey}
-\maketitle
 \date{} %Leave blank to print no date, or you can type in the desired date
+\maketitle
 
 \setcounter{page}{1}
 \pagenumbering{roman}
@@ -86,7 +89,7 @@ Theory stuff goes in here, including but not limited to:
 \begin{itemize}
 \item Cosmic ray sources
 \item Large molecular clouds, and their interactions with CRs
-\item CO \& 13CO as tracers
+\item CO \& \elem{13}{CO} as tracers
 \item Telescope information/general data stuff?
 \item Galactic rotation/Doppler shift in Mopra data
 \end{itemize}
@@ -98,7 +101,7 @@ Go Coen! Goen! Wow that was awful!
 \subsection{Molecular Clouds and CR interactions}
 Go Reece!  Yeah, it's a fun time to be alive! Being like the most bitsh, my ponk can rock stock and frocks.!!
 
-Hi hello yes here is an example of a thing I will reference. \parencite{rmp1}
+Hi hello yes here is an example of a thing I will reference. \parencite{rmp1} Now I'm testing the SI units package, and checking in on the hyphenation: \(\unit{120}{\centi\metre\usk\kilo\gram\squared}\). Nice, the whole thing stays together. Whoops, better make sure \degree C still works outside of maths environments haha. It sort of does. Without the unit command, symbol commands will hug the next word: Gotta do it like \unit{\second} or you get \second tomped
 
 \subsection{CO, \elem{13}{CO} as tracers}
 Kyle is going the extra mile in style! Friend, you have a good plan to make the works go forwards! More words just to make a larger paragraph!
