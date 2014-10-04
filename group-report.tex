@@ -1,45 +1,53 @@
-\documentclass[a4paper,titlepage,oneside]{article}
+\documentclass[a4paper, titlepage, oneside]{article}
 \usepackage[vmargin=2cm,hmargin=2cm]{geometry}
 \usepackage{amsmath,amssymb} % mathematical markup
 \usepackage{graphicx,epstopdf,listings,csvsimple,float,xcolor}
 \usepackage[allcolors=blue,colorlinks=true]{hyperref}
-\usepackage[round,authoryear]{natbib}
 \usepackage{multicol}
 \usepackage{gensymb}
 \usepackage{wasysym}
+\usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
 
 
 % listings, xcolor
 \lstset{language=Matlab,
-		commentstyle=\color{gray}\textit,
-		stringstyle=\color{purple},
-		showstringspaces=false,
-		numbers=left,
-		breaklines=true,
-		breakatwhitespace=true,
-		aboveskip=0pt,
-		belowskip=20pt}
+    commentstyle=\color{gray}\textit,
+    stringstyle=\color{purple},
+    showstringspaces=false,
+    numbers=left,
+    breaklines=true,
+    breakatwhitespace=true,
+    aboveskip=0pt,
+    belowskip=20pt}
 
-% geometry	:	page margins
-% amsmath	:	maths
-% amssymb	:	maths
-% graphicx	:	\includegraphic
-% epstopdf	:	use of eps files in document
-% hyperref	:	in-document links
-% listings	:	import external code
-% csvsimple	:	import csv tables
-% float		:	float graphics
-% xcolor	:	use colour formatting
-% natbib	:	\citet, \citep
-% gensymb	:	\degree, \celsius, \micro, \ohm
-% wasysym	:	\astrosun (conflict with amssymb)
+% geometry  : page margins
+% amsmath : maths
+% amssymb : maths
+% graphicx  : \includegraphic
+% epstopdf  : use of eps files in document
+% hyperref  : in-document links
+% listings  : import external code
+% csvsimple : import csv tables
+% float   : float graphics
+% xcolor  : use colour formatting
+% gensymb : \degree, \celsius, \micro, \ohm
+% wasysym : \astrosun (conflict with amssymb)
+% biblatex : bibliography
 
+% Bibliography setup
+\renewcommand{\nameyeardelim}{\addcomma\addspace} % Change delimiter for in-line citations to include a comma
+\addbibresource{group-report.bib}
+
+% Custom commands
 \newcommand{\elem}[2]{\textsuperscript{#1}{#2}}
+\newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 
+% Document proper
 \begin{document}
 \title{\textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes.}}
 \author{A.~K. Child \and C.~M. Roe-Simons \and K.~T. Leaver \and H.~D. Poulter \and R.~M. Harvey}
 \maketitle
+\date{} %Leave blank to print no date, or you can type in the desired date
 
 \setcounter{page}{1}
 \pagenumbering{roman}
@@ -88,7 +96,9 @@ Fun!
 Go Coen! Goen! Wow that was awful!
 
 \subsection{Molecular Clouds and CR interactions}
-Go Reece! Yeah, it's a fun time to be alive! Being like the most bitsh, my ponk can rock stock and frocks.!!
+Go Reece!  Yeah, it's a fun time to be alive! Being like the most bitsh, my ponk can rock stock and frocks.!!
+
+Hi hello yes here is an example of a thing I will reference. \parencite{rmp1}
 
 \subsection{CO, \elem{13}{CO} as tracers}
 Kyle is going the extra mile in style! Friend, you have a good plan to make the works go forwards! More words just to make a larger paragraph!
@@ -118,7 +128,6 @@ Here are the things for this source. Probably include a picture of the source ju
 Bitch, we concluding now, making the statements that make a conclusion possible to be made with the words and the mouth. Bitch, we're flawless give us good grades.
 \end{multicols}
 
-\bibliographystyle{apalike}
-\bibliography{group-report-ref}
+\printbibliography[heading=bibintoc]
 
 \end{document}
