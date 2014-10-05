@@ -107,17 +107,26 @@ Fun! These titles are all outdated! We won't use these!
 \paragraph{}
 Go Coen! Goen! Wow that was awful!
 
-\subsection{Molecular clouds and cosmic ray interactions}
+\subsection{Molecular clouds}
+\subsubsection{Composition and structure}
 \paragraph{}
-The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen \molec{H}{2} , which [as mentioned previously / for reasons to be discussed shortly] is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer.
-
-Gas and dust formations with a total mass between \unit{10^3} and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter \parencite{Murray:2011}. ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \unit{2\e{-20}} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \unit{10^4} to \unit{10^6} molecules per cubic centimetre \parencite{Ferriere:2001}.
-
 The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen (\molec{H}{2}), which [as mentioned previously / for reasons to be discussed shortly] is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer \parencite{Glover:2011}.
 
-Gas and dust formations with a total mass between \(10^3\) and \(10^7 ~\mathrm{M_{\odot}}\) are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{Murray:2011} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around 2\e{-20} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre \parencite{Ferriere:2001}.
+Gas and dust formations with a total mass between \(10^3\) and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{Murray:2011} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \(2\e{-20}\) to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre \parencite{Ferriere:2001}.
 
-Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma rays, in our case often within TeV range and hence detectable by the HESS telescope. Bremsstrahlung radiation is motivated by Coulombic forces, and results from inbound cosmic rays being deflected by charged particles present in the interstellar gas. This change thus emitting gamma radiation. Inverse Compton scattering is motivated by conservation of momentum, and involves high-energy cosmic rays colliding with `soft' photons in the gas, exchanging momentum in the process resulting in a more energetic photon, with energies in TeV ranges \parencite{Ferriere:2001}. The synchrotron effect may also produce gamma rays, but is not included in this data set as HESS is not sensitive to such effects.
+\subsubsection{Interactions with cosmic rays}
+\paragraph{}
+Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma rays, in our case often within TeV range and hence detectable by the HESS telescope. Bremsstrahlung radiation is motivated by Coulombic forces, and results from inbound cosmic rays being deflected by charged particles present in the interstellar gas, this change thus emitting gamma radiation. Inverse Compton scattering is motivated by conservation of momentum, and involves high-energy cosmic rays colliding with ``soft'' photons in the gas, exchanging momentum and in the process resulting in a more energetic photon with energies in TeV ranges \parencite{Ferriere:2001}. The synchrotron effect may also produce gamma rays, but is not included in this data set as HESS is not sensitive to such effects.
+
+\subsubsection{Kinetic energy of expanding bubbles}
+\paragraph{}
+Powerful events such as supernovae occurring in GMCs can push away all nearby gas, clearing out distinct ``bubble'' regions readily visible in images of gas distributions. The energy released by the event can be determined by from the kinetic motion of the gas being swept away, as the majority of it is converted into this form.
+
+The Mopra data cubes provide redshift speeds for each image slice, hence permitting us to find the relative speeds of two areas of gas, such as the two sides of an expanding bubble. The calculation is based on the familiar (nonrelativistic) equation \(\mathrm{KE} = \frac{1}{2}mv^2\), for \(m\) the mass of the material displaced by the bubble (often somewhat of an estimate) and \(v\) the speed at which the bubble is expanding, i.e., the average speed of the gas in the reference frame of the object presumed to be at the centre. The full derivation can be found in Appendix~\ref{app:kinetic}, but the final result is given by
+\begin{equation}
+  \mathrm{KE} = \frac{\pi^4 \rho {(\Delta l)}^3 d^3 \lvert v_1 - v_2 \rvert}{1.39968\e8} \. ,
+\end{equation}
+where \(\rho\) is an estimate of the local gas density in \(\kilo\gram\usk\centi\metre\rpcubed\), \(\Delta l\) is the maximum width of the bubble in degrees, \(d\) is the distance to the bubble at greatest \(\Delta l\) in \(\centi\metre\), and \(v_1\) and \(v_2\) are the redshift speeds of the front and back of the bubble in \(\metre\usk\reciprocal\second\).
 
 \subsection{\elem{12}{CO} and \elem{13}{CO} as tracers}
 \paragraph{}
@@ -149,7 +158,7 @@ This equation holds for a galaxy with variable rotation \(v(R)\) dependent on ra
 \paragraph{}
 Data analysis is coming first. We talk about many things including how we managed to reduce the noise in the \texttt{.fits} files we used to make the analysis. Yeas!
 
-\subsection{Noise analsyis}
+\subsection{Noise analysis}
 \paragraph{}
 Yes, keem em cumming!!
 
@@ -165,14 +174,26 @@ Here are some of the candidates for the gamma ray sources observed.
 \paragraph{}
 Here are the things for this source. Probably include a picture of the source just as a nice ``here is thing''.
 
+% I don't know if this is the best place for this stuff yet. It's kinda a result, kinda analysis
+\subsection{IGR J16358-4726}
+\paragraph{}
+Also known as [KRL2007b] 194, this object is believed to be an x-ray binary, specifically of the variety which features a neutron star orbiting what is likely a main sequence star \parencite{Falanga:2011}. Etc etc this section under construction
+
 \section{Conclusions}
 \paragraph{}
 Bitch, we concluding now, making the statements that make a conclusion possible to be made with the words and the mouth. Bitch, we're flawless give us good grades.
 \end{multicols}
 
 \newpage
+
 \appendix
-\section{Galactic doppler shift}
+
+\section{Derivation of kinetic energy of expanding bubble}
+\label{app:kinetic}
+\paragraph{}
+There will be a lot of equations here and it will be nice.
+
+\section{Derivation of galactic doppler shift}
 \label{app:doppler}
 \paragraph{}
 Here we derive the equation found in Section~\ref{sec:gal-rot}. Looking at Fig.~\ref{fig:doppler}, we can (probably not) see the setup we're going to be dealing with here. In order to derive the velocity along the line of sight in the galactic plane, it is necessary to first consider the velocity field of the galactic plane. With coordinates centred on the GC, the velocity field can be expressed as
@@ -182,7 +203,7 @@ Here we derive the equation found in Section~\ref{sec:gal-rot}. Looking at Fig.~
 \end{equation}
 where \(x\), \(y\) are the Cartesian coordinates of point P, and \(R\) is the radial distance from point P to the GC, which by Pythagoras fulfils
 \begin{equation}
-  R^2=x^2+y^2
+  R^2=x^2+y^2.
 \end{equation}
 In Eq.~\eqref{eq:vel-field}, \(v(R)\) is the radial velocity at point P with dependence on \(R\). This velocity field has galactic radial velocities pointing counter clockwise, which is what would be expected of a model for the Milky Way. In order to compute the component of velocities along the line of sight, it is worth considering first the dot product of the velocity field with the direction vector in the direction of the line of sight, \(\mathbf{\hat{d}}\):
 \begin{align}
