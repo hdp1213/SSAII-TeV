@@ -39,20 +39,20 @@
 % xcolor  : use colour formatting
 % wasysym : \astrosun (conflict with amssymb)
 % biblatex : bibliography
-% siunits : management of SI units; encourage using \unit{value}{units} command whenever possible
+% SIunits : management of SI units; encourage using \unit{value}{units} command whenever possible
 
-% Custom commands
+% Custom macros
 \newcommand{\elem}[2]{\textsuperscript{#1}{#2}}
 \newcommand{\molec}[2]{\ensuremath{\text{#1}_{#2}}}
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
-\newcommand{\smass}{\ensuremath{\mega_\odot}} % This hack relies on the SIunits package
-\newcommand{\parsec}{\ensuremath{\pico\centi}} % This hack relies on the SIunits package
+\newcommand{\smass}{\mathrm{M_\odot}}
+\newcommand{\parsec}{\mathrm{pc}}
 
 % Document proper
 \begin{document}
-\title{\textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes.}}
-\author{A.~K. Child \and C.~M. Roe-Simons \and K.~T. Leaver \and H.~D. Poulter \and R.~M. Harvey}
-\date{} %Leave blank to print no date, or you can type in the desired date
+\title{\textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes}}
+\author{A.~K. Child \and R.~M. Harvey \and K.~T. Leaver \and H.~D. Poulter \and C.~M. Roe-Simons}
+\date{7 October 2014} %Leave blank to print no date, or you can type in the desired date
 \maketitle
 
 \setcounter{page}{1}
@@ -66,22 +66,22 @@
 \pagenumbering{arabic}
 
 \begin{center}
-{\LARGE \textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes.}}
+  {\large \textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes}}
 
-\vspace{1.5em}
+  \vspace{1.5em}
 
-\textsc{A.~K. Child\footnote{Featured telescopes} \quad C.~M. Roe-Simons\footnote{Cosmic ray sources} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation} \quad R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions}}
+  \textsc{A.~K. Child\footnote{Featured telescopes} \quad R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation} \quad C.~M. Roe-Simons\footnote{Cosmic ray sources}}
 \end{center}
 
 \vspace{2em}
 
 \begin{minipage}{0.93\textwidth}
-\begin{abstract}
-This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions. Bro!!
-\end{abstract}
+  \begin{abstract}
+  This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions. Bro!!
+  \end{abstract}
 \end{minipage}
 
-% \vspace{2.5em} % What the heck man this looks trash
+\vspace{2.5em}
 
 \begin{multicols}{2}
 \section{Introduction}
@@ -92,11 +92,11 @@ Words words words, quick run-down of gamma rays and really high ones, just prett
 \paragraph{}
 Theory stuff goes in here, including but not limited to:
 \begin{itemize}
-\item Cosmic ray sources
-\item Large molecular clouds, and their interactions with CRs
-\item CO \& \elem{13}{CO} as tracers
-\item Telescope information/general data stuff?
-\item Galactic rotation/Doppler shift in Mopra data
+  \item Cosmic ray sources
+  \item Large molecular clouds, and their interactions with CRs
+  \item CO \& \elem{13}{CO} as tracers
+  \item Telescope information/general data stuff?
+  \item Galactic rotation/Doppler shift in Mopra data
 \end{itemize}
 Fun! These titles are all outdated! We won't use these!
 
@@ -120,15 +120,17 @@ Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma r
 \paragraph{}
 Alisha ain't no child, no siree! I ran out of shitty announcer puns, forgive me! Tele-no-scope 360 xboxs swag!!!
 
+More words! We need more words on this page! There's this problem I'm seeing where the paragraph spacing gets all wide and bad because \LaTeX\: doesn't think there's enough here and stretches things out. Gotta have lotsa words.
+
 \subsection{Galactic rotation}
 \paragraph{}
 It's a me, shitty mc fuckers, ready to make panties wet (or dicks erect, i don't discriminate here everyone's welcome) with my amazing diagram! This is literally the only thing that will be featured in this section! Just a huge-ass diagram is all anyone ever wanted!!
 
 \begin{figure}[H]
-\centering
-\includegraphics[width = 8cm]{figures/galactic-rotation}
-\caption{Galactic rotation showing Doppler shifts}
-\label{fig:gal-rot}
+  \centering
+  \includegraphics[width = 8cm]{figures/galactic-rotation}
+  \caption{Galactic rotation showing Doppler shifts}
+  \label{fig:gal-rot}
 \end{figure}
 
 \section{Data analysis}
