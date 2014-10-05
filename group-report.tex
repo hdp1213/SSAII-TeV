@@ -9,6 +9,7 @@
 \usepackage{wasysym}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
 \usepackage[cdot, amssymb]{SIunits}
+\usepackage{aas_macros}
 
 % listings, xcolor
 \lstset{language=Matlab,
@@ -73,7 +74,7 @@
   \textsc{A.~K. Child\footnote{Featured telescopes} \quad R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation} \quad C.~M. Roe-Simons\footnote{Cosmic ray sources}}
 \end{center}
 
-\vspace{2em}
+\vspace{1.5em}
 
 \begin{minipage}{0.93\textwidth}
   \begin{abstract}
@@ -81,7 +82,9 @@
   \end{abstract}
 \end{minipage}
 
-\vspace{2.5em}
+\vspace{1em} % What the heck man this looks trash
+% fuck u m8 every paper i've read has a neat space under the abstract
+
 
 \begin{multicols}{2}
 \section{Introduction}
@@ -108,9 +111,13 @@ Go Coen! Goen! Wow that was awful!
 \paragraph{}
 The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen \molec{H}{2} , which [as mentioned previously / for reasons to be discussed shortly] is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer.
 
-Gas and dust formations with a total mass between \unit{10^3} and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{apj1} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \unit{2\e{-20}} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \unit{10^4} to \unit{10^6} molecules per cubic centimetre. \parencite{rmp1}
+Gas and dust formations with a total mass between \unit{10^3} and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter \parencite{Murray:2011}. ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \unit{2\e{-20}} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \unit{10^4} to \unit{10^6} molecules per cubic centimetre \parencite{Ferriere:2001}.
 
-Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma rays, in our case often within teraelectronvolt range and detectable by the HESS telescope. Bremsstrahlung radiation is motivated by Coulombic repulsion, and results from inbound cosmic ray electrons being deflected (accelerated) away from the electrons present in the interstellar gas, thus emitting gamma radiation. Inverse Compton scattering is motivated by conservation of momentum, and involves high-energy cosmic ray electrons colliding with protons in the gas and accelerating them to high speeds, in the process emitting gamma rays. \parencite{rmp1} The synchotron effect may also produce gamma rays, however they are not included in this data set.
+The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen (\molec{H}{2}), which [as mentioned previously / for reasons to be discussed shortly] is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer \parencite{Glover:2011}.
+
+Gas and dust formations with a total mass between \(10^3\) and \(10^7 ~\mathrm{M_{\odot}}\) are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{Murray:2011} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around 2\e{-20} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre \parencite{Ferriere:2001}.
+
+Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma rays, in our case often within TeV range and hence detectable by the HESS telescope. Bremsstrahlung radiation is motivated by Coulombic forces, and results from inbound cosmic rays being deflected by charged particles present in the interstellar gas. This change thus emitting gamma radiation. Inverse Compton scattering is motivated by conservation of momentum, and involves high-energy cosmic rays colliding with `soft' photons in the gas, exchanging momentum in the process resulting in a more energetic photon, with energies in TeV ranges \parencite{Ferriere:2001}. The synchrotron effect may also produce gamma rays, but is not included in this data set as HESS is not sensitive to such effects.
 
 \subsection{\elem{12}{CO} and \elem{13}{CO} as tracers}
 \paragraph{}
@@ -120,11 +127,16 @@ Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma r
 \paragraph{}
 Alisha ain't no child, no siree! I ran out of shitty announcer puns, forgive me! Tele-no-scope 360 xboxs swag!!!
 
-More words! We need more words on this page! There's this problem I'm seeing where the paragraph spacing gets all wide and bad because \LaTeX\: doesn't think there's enough here and stretches things out. Gotta have lotsa words.
+More words! We need more words on this page! There's this problem I'm seeing where the paragraph spacing gets all wide and bad because \LaTeX~doesn't think there's enough here and stretches things out. Gotta have lotsa words.
 
 \subsection{Galactic rotation}
+\label{sec:gal-rot}
 \paragraph{}
-It's a me, shitty mc fuckers, ready to make panties wet (or dicks erect, i don't discriminate here everyone's welcome) with my amazing diagram! This is literally the only thing that will be featured in this section! Just a huge-ass diagram is all anyone ever wanted!!
+The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on co-linear objects. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. See Appendix~\ref{app:doppler} for the derivation. Taking the distance from the sun to the galactic centre (GC) as \(R_0\), and any other radial distance as \(R\), with distance from the sun as \(d\), the observed velocity of objects along a line of sight with galactic longitude \(l\) taking into account the sun's component of velocity around the galaxy is given by:
+\begin{equation}
+  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}
+\end{equation}
+This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance from the GC, and for the sake of simplicity in this report is taken to be a constant \(v(R)=\unit{220}{\metre}\) (reference thanks). The distance from the GC is also taken to be \(R_0=8\). Words words words, my friend!
 
 \begin{figure}[H]
   \centering
@@ -135,7 +147,7 @@ It's a me, shitty mc fuckers, ready to make panties wet (or dicks erect, i don't
 
 \section{Data analysis}
 \paragraph{}
-Data analysis is coming first. We talk about many things including how we managed to reduce the nouse in the \texttt{.fits} files we used to make the analysis. Yeas!
+Data analysis is coming first. We talk about many things including how we managed to reduce the noise in the \texttt{.fits} files we used to make the analysis. Yeas!
 
 \subsection{Noise analsyis}
 \paragraph{}
@@ -157,6 +169,47 @@ Here are the things for this source. Probably include a picture of the source ju
 \paragraph{}
 Bitch, we concluding now, making the statements that make a conclusion possible to be made with the words and the mouth. Bitch, we're flawless give us good grades.
 \end{multicols}
+
+\newpage
+\appendix
+\section{Galactic doppler shift}
+\label{app:doppler}
+\paragraph{}
+Here we derive the equation found in Section~\ref{sec:gal-rot}. Looking at Fig.~\ref{fig:doppler}, we can (probably not) see the setup we're going to be dealing with here. In order to derive the velocity along the line of sight in the galactic plane, it is necessary to first consider the velocity field of the galactic plane. With coordinates centred on the GC, the velocity field can be expressed as
+\begin{equation}
+  \label{eq:vel-field}
+  \mathbf{v}(x,y)=v(R)\cdot\!\left(\frac{y}{R},-\frac{x}{R}\right)
+\end{equation}
+where \(x\), \(y\) are the Cartesian coordinates of point P, and \(R\) is the radial distance from point P to the GC, which by Pythagoras fulfils
+\begin{equation}
+  R^2=x^2+y^2
+\end{equation}
+In Eq.~\eqref{eq:vel-field}, \(v(R)\) is the radial velocity at point P with dependence on \(R\). This velocity field has galactic radial velocities pointing counter clockwise, which is what would be expected of a model for the Milky Way. In order to compute the component of velocities along the line of sight, it is worth considering first the dot product of the velocity field with the direction vector in the direction of the line of sight, \(\mathbf{\hat{d}}\):
+\begin{align}
+  \mathbf{v}(x,y)\cdot\mathbf{\hat{d}}&=v(R)\left[\left(\frac{y}{R},-\frac{x}{R}\right)\!\cdot(\cos{l},\sin{l})\right] \\
+  &=v(R)\left(\frac{y\cos{l}-x\sin{l}}{R}\right) \\
+  &=v(R)\left(\frac{y\cos{l}-x\sin{l}}{\sqrt{x^2+y^2}}\right)
+  \label{eq:vel-dot}
+\end{align}
+This expression gives the component of velocity in the \(\mathbf{\hat{d}}\) direction for any \((x,y)\). In order for this expression to be of any use in calculating the Doppler shift from the Mopra data, the coordinates need to be constained to the line of sight. The equation for the line of sight is given in vector form as:
+\begin{equation}
+  \lambda(d,l)=(d\cos{l}-R_0,d\sin{l})
+\end{equation}
+Substituting the \(x\)- and \(y\)-coordinates from this expression in to Eq.~\eqref{eq:vel-dot} and expanding gives
+\begin{equation}
+  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}
+\end{equation}
+This expression only yields the absolute motion in the galaxy, and it is easy to see that for \(d=0\), \(v(0)=v(R)\sin{l}\) -- the sun's component of velocity along the line of sight. Subtracting this value gives us the equation used in the analysis of Mopra data:
+\begin{equation}
+  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}
+\end{equation}
+
+\begin{figure}
+  \centering
+  \includegraphics[width=13cm]{figures/doppler-shift}
+  \caption{Velocity along line of sight in the galactic plane}
+  \label{fig:doppler}
+\end{figure}
 
 \printbibliography[heading = bibintoc] % Include bibliography entry in ToC
 
