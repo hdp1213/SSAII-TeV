@@ -4,11 +4,11 @@
 \usepackage[vmargin = 2cm, hmargin = 2cm]{geometry}
 \usepackage{amsmath,amssymb}
 \usepackage{graphicx, epstopdf, listings, csvsimple, float, xcolor}
-\usepackage[allcolors = blue, colorlinks = true]{hyperref}
+\usepackage[allcolors = blue, colorlinks = true, pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
 \usepackage{multicol}
 \usepackage{wasysym}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
-\usepackage[cdot, amssymb]{siunits}
+\usepackage[cdot, amssymb]{SIunits}
 
 % listings, xcolor
 \lstset{language=Matlab,
@@ -45,6 +45,7 @@
 \newcommand{\elem}[2]{\textsuperscript{#1}{#2}}
 \newcommand{\molec}[2]{\ensuremath{\text{#1}_{#2}}}
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
+\newcommand{\smass}{\ensuremath{\mega_\odot}} % This hack relies on the SIunits package
 
 % Document proper
 \begin{document}
@@ -75,7 +76,7 @@
 
 \begin{minipage}{0.93\textwidth}
 \begin{abstract}
-This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions. Bro!
+This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions. Bro!!
 \end{abstract}
 \end{minipage}
 
@@ -104,9 +105,9 @@ Go Coen! Goen! Wow that was awful!
 
 \subsection{Molecular clouds and cosmic ray interactions}
 \paragraph{}
-The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen (\(\text{H}_2\)), which [as mentioned previously / for reasons to be discussed shortly] is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \(\text{H}_2\) in effectively equal quantities, making it an excellent tracer.
+The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen \molec{H}{2} , which [as mentioned previously / for reasons to be discussed shortly] is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer.
 
-Gas and dust formations with a total mass between \(10^3\) and \(10^7 \text{ M}_\odot\) are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{apj1} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around 2\e{-20} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre. \parencite{rmp1}
+Gas and dust formations with a total mass between \unit{10^3} and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{apj1} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \unit{2\e{-20}} to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \unit{10^4} to \unit{10^6} molecules per cubic centimetre. \parencite{rmp1}
 
 Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma rays, in our case often within teraelectronvolt range and detectable by the HESS telescope. Bremsstrahlung radiation is motivated by Coulombic repulsion, and results from inbound cosmic ray electrons being deflected (accelerated) away from the electrons present in the interstellar gas, thus emitting gamma radiation. Inverse Compton scattering is motivated by conservation of momentum, and involves high-energy cosmic ray electrons colliding with protons in the gas and accelerating them to high speeds, in the process emitting gamma rays. \parencite{rmp1} The synchotron effect may also produce gamma rays, however they are not included in this data set.
 
