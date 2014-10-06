@@ -119,14 +119,15 @@ Gas and dust formations with a total mass between \(10^3\) and \unit{10^7}{\smas
 Cosmic rays incident on GMCs can through a variety of mechanisms produce gamma rays, in our case often within TeV range and hence detectable by the HESS telescope. Bremsstrahlung radiation is motivated by Coulombic forces, and results from inbound cosmic rays being deflected by charged particles present in the interstellar gas, this change thus emitting gamma radiation. Inverse Compton scattering is motivated by conservation of momentum, and involves high-energy cosmic rays colliding with ``soft'' photons in the gas, exchanging momentum and in the process resulting in a more energetic photon with energies in TeV ranges \parencite{Ferriere:2001}. The synchrotron effect may also produce gamma rays, but is not included in this data set as HESS is not sensitive to such effects.
 
 \subsubsection{Kinetic energy of expanding bubbles}
+\label{sec:kinetic}
 \paragraph{}
-Powerful events such as supernovae occurring in GMCs can push away all nearby gas, clearing out distinct ``bubble'' regions readily visible in images of gas distributions. The energy released by the event can be determined by from the kinetic motion of the gas being swept away, as the majority of it is converted into this form.
+Powerful events in GMCs -- such as supernovae -- can push away all nearby gas, clearing out distinct ``bubble'' regions readily visible in images of gas distributions. In order to find the energy released by the event, we simply need find the kinetic energy of the gas which is now moving away, assuming it previously had negligible kinetic motion and almost all of the energy released by the event has been transferred to the surrounding gas.
 
-The Mopra data cubes provide redshift speeds for each image slice, hence permitting us to find the relative speeds of two areas of gas, such as the two sides of an expanding bubble. The calculation is based on the familiar (nonrelativistic) equation \(\mathrm{KE} = \frac{1}{2}mv^2\), for \(m\) the mass of the material displaced by the bubble (often somewhat of an estimate) and \(v\) the speed at which the bubble is expanding, i.e., the average speed of the gas in the reference frame of the object presumed to be at the centre. The full derivation can be found in Appendix~\ref{app:kinetic}, but the final result is given by
+The Mopra data cubes provide redshift speeds for each image slice, hence permitting us to find the relative speeds of two areas of gas, such as the two sides of an expanding bubble. For the full derivation please see Appendix~\ref{app:kinetic}, however the final result is replicated here:
 \begin{equation}
-  \mathrm{KE} = \frac{\pi^4 \rho {(\Delta l)}^3 d^3 \lvert v_1 - v_2 \rvert}{1.39968\e8} \. ,
+  \mathrm{KE} = \frac{\pi ^ 4}{6} {\left( \frac{\Delta l}{360} \right)}^3 \rho d^3 {(v_1 - v_2)}^2 \, \joule \, ,
 \end{equation}
-where \(\rho\) is an estimate of the local gas density in \(\kilo\gram\usk\centi\metre\rpcubed\), \(\Delta l\) is the maximum width of the bubble in degrees, \(d\) is the distance to the bubble at greatest \(\Delta l\) in \(\centi\metre\), and \(v_1\) and \(v_2\) are the redshift speeds of the front and back of the bubble in \(\metre\usk\reciprocal\second\).
+where \(\Delta l\) is the maximum angular width of the bubble in degrees, \(\rho\) is an estimate of the mass density in \(\kilo\gram\usk\centi\metre\rpcubed\) of the gas previously occupying that volume, \(d\) is the distance to the centre of the bubble in \(\centi\metre\), and \(v_1\) and \(v_2\) are the redshift speeds of the front and back of the bubble in \(\metre\usk\reciprocal\second\).
 
 \subsection{\elem{12}{CO} and \elem{13}{CO} as tracers}
 \paragraph{}
@@ -191,7 +192,28 @@ Bitch, we concluding now, making the statements that make a conclusion possible 
 \section{Derivation of kinetic energy of expanding bubble}
 \label{app:kinetic}
 \paragraph{}
-There will be a lot of equations here and it will be nice.
+Here we derive the equation found in Section~\ref{sec:kinetic}. We begin with the familiar nonrelativistic equation for kinetic energy,
+\begin{equation}
+  \mathrm{KE} = \frac{1}{2} m v ^ 2 \, ,
+\end{equation}
+where \(m\) is the mass of the material displaced by the bubble (typically somewhat of an estimate) and \(v\) is the speed at which the bubble is expanding, i.e., the average speed of the gas in the reference frame of the object presumed to be at the centre. Mass \(m\) is given by mass density \(\rho\) multiplied by volume \(V\), and \(v\) can be found by halving the difference in speeds \(v_1\) and \(v_2\) of the front and back of the bubble:
+\begin{equation}
+  \mathrm{KE} = \frac{1}{2} \rho V { \left( \frac{\lvert v_1 - v_2 \rvert}{2} \right) }^2 \, .
+\end{equation}
+The volume \(V\) of the bubble is given by its radius, hence,
+\begin{equation}
+  \mathrm{KE} = \frac{1}{8} \rho \left( \frac{4\pi}{3} r^3 \right) {(v_1 - v_2)}^2
+\end{equation} \begin{equation}
+  \mathrm{KE} = \frac{1}{6} \pi \rho r^3 {(v_1 - v_2)}^2  \, .
+\end{equation}
+To find the radius of the bubble, we first determine the image slice which is halfway between the front and back slices of the bubble, ideally giving us a view of the bubble's cross section at the midpoint. Using the formula outlined at the end of Appendix~\ref{app:doppler}, we can find the distance \(d\) to this slice. Now, consider a circle of radius \(d\) with its origin centred on the Solar System. This circle has a circumference of \(l = 2 \pi d\), and passes through all objects which are located a distance \(d\) away from us, including the middle of our chosen bubble. If we measure the angular width \(\Delta l\) of the bubble in degrees, then by a simple ratio the bubble has diameter \(\frac{\Delta l}{360}l\). Note this is diameter and not radius, so to get \(r\) we then halve this result. Thus,
+\begin{equation}
+  \mathrm{KE} = \frac{1}{6} \pi \rho {\left( \frac{1}{2} \frac{\Delta l}{360} 2 \pi d \right)}^3 {(v_1 - v_2)}^2  \, ,
+\end{equation}
+and we rearrange to get our final result:
+\begin{equation}
+  \mathrm{KE} = \frac{\pi ^ 4}{6} {\left( \frac{\Delta l}{360} \right)}^3 \rho d^3 {(v_1 - v_2)}^2 \, .
+\end{equation}
 
 \section{Derivation of galactic doppler shift}
 \label{app:doppler}
