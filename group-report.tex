@@ -142,11 +142,11 @@ More words! We need more words on this page! There's this problem I'm seeing whe
 \subsection{Galactic rotation}
 \label{sec:gal-rot}
 \paragraph{}
-The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on co-linear objects. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. See Appendix~\ref{app:doppler} for the derivation. Taking the distance from the sun to the galactic centre (GC) as \(R_0\), and any other radial distance as \(R\), with distance from the sun as \(d\), the observed velocity of objects along a line of sight with galactic longitude \(l\) taking into account the sun's component of velocity around the galaxy is given by:
+The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on co-linear objects. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. See Appendix~\ref{app:doppler} for the derivation. Hence, the velocity of an object along the line of sight with galactic latitude \(l\) is given by
 \begin{equation}
-  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}
+  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}\;\,,
 \end{equation}
-This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance from the GC, and for the sake of simplicity in this report is taken to be a constant \(v(R)=\unit{220}{\metre}\) (reference thanks). The distance from the GC is also taken to be \(R_0=8\). Words words words, my friend!
+where the distance from the sun to the galactic centre (GC) is \(R_0\), and distance from the sun to the object of interest is \(d\). This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance \(R\) from the GC, and for the sake of simplicity in this report is taken to be a constant \(v(R)=\unit{220}{\kilo\metre\usk\reciprocal\second}\) (CITE-REF). The distance from the GC is also taken to be \(R_0=\unit{8}{\kilo\parsec}\) (CITE-REF).
 
 \begin{figure}[H]
   \centering
@@ -178,7 +178,7 @@ Here are the things for this source. Probably include a picture of the source ju
 % I don't know if this is the best place for this stuff yet. It's kinda a result, kinda analysis
 \subsection{IGR J16358-4726}
 \paragraph{}
-Also known as [KRL2007b] 194, this object is believed to be an x-ray binary, specifically of the variety which features a neutron star orbiting what is likely a main sequence star \parencite{Falanga:2011}. Etc etc this section under construction
+Also known as [KRL2007b] 194, this object is believed to be an x-ray binary, specifically of the variety which features a neutron star orbiting what is likely a main sequence star \parencite{Falanga:2011}. Etc etc this s-etc-ion under construction.
 
 \section{Conclusions}
 \paragraph{}
@@ -221,30 +221,11 @@ and we rearrange to get our final result:
 Here we derive the equation found in Section~\ref{sec:gal-rot}. Looking at Fig.~\ref{fig:doppler}, we can (probably not) see the setup we're going to be dealing with here. In order to derive the velocity along the line of sight in the galactic plane, it is necessary to first consider the velocity field of the galactic plane. With coordinates centred on the GC, the velocity field can be expressed as
 \begin{equation}
   \label{eq:vel-field}
-  \mathbf{v}(x,y)=v(R)\cdot\!\left(\frac{y}{R},-\frac{x}{R}\right)
+  \mathbf{v}(x,y)=v(R)\cdot\!\left(\frac{y}{R},-\frac{x}{R}\right)\;,
 \end{equation}
 where \(x\), \(y\) are the Cartesian coordinates of point P, and \(R\) is the radial distance from point P to the GC, which by Pythagoras fulfils
 \begin{equation}
-  R^2=x^2+y^2.
-\end{equation}
-In Eq.~\eqref{eq:vel-field}, \(v(R)\) is the radial velocity at point P with dependence on \(R\). This velocity field has galactic radial velocities pointing counter clockwise, which is what would be expected of a model for the Milky Way. In order to compute the component of velocities along the line of sight, it is worth considering first the dot product of the velocity field with the direction vector in the direction of the line of sight, \(\mathbf{\hat{d}}\):
-\begin{align}
-  \mathbf{v}(x,y)\cdot\mathbf{\hat{d}}&=v(R)\left[\left(\frac{y}{R},-\frac{x}{R}\right)\!\cdot(\cos{l},\sin{l})\right] \\
-  &=v(R)\left(\frac{y\cos{l}-x\sin{l}}{R}\right) \\
-  &=v(R)\left(\frac{y\cos{l}-x\sin{l}}{\sqrt{x^2+y^2}}\right)
-  \label{eq:vel-dot}
-\end{align}
-This expression gives the component of velocity in the \(\mathbf{\hat{d}}\) direction for any \((x,y)\). In order for this expression to be of any use in calculating the Doppler shift from the Mopra data, the coordinates need to be constained to the line of sight. The equation for the line of sight is given in vector form as:
-\begin{equation}
-  \lambda(d,l)=(d\cos{l}-R_0,d\sin{l})
-\end{equation}
-Substituting the \(x\)- and \(y\)-coordinates from this expression in to Eq.~\eqref{eq:vel-dot} and expanding gives
-\begin{equation}
-  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}
-\end{equation}
-This expression only yields the absolute motion in the galaxy, and it is easy to see that for \(d=0\), \(v(0)=v(R)\sin{l}\) -- the sun's component of velocity along the line of sight. Subtracting this value gives us the equation used in the analysis of Mopra data:
-\begin{equation}
-  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}
+  R^2=x^2+y^2\;.
 \end{equation}
 
 \begin{figure}
@@ -253,6 +234,26 @@ This expression only yields the absolute motion in the galaxy, and it is easy to
   \caption{Velocity along line of sight in the galactic plane}
   \label{fig:doppler}
 \end{figure}
+
+In Eq.~\eqref{eq:vel-field}, \(v(R)\) is the radial velocity at point P with dependence on \(R\). This velocity field has galactic radial velocities pointing counter clockwise, which is what would be expected of a model for the Milky Way. In order to compute the component of velocities along the line of sight, it is worth considering first the dot product of the velocity field with the direction vector in the direction of the line of sight, \(\mathbf{\hat{d}}\):
+\begin{align}
+  \mathbf{v}(x,y)\cdot\mathbf{\hat{d}}&=v(R)\left[\left(\frac{y}{R},-\frac{x}{R}\right)\!\cdot(\cos{l},\sin{l})\right] \\
+  &=v(R)\left(\frac{y\cos{l}-x\sin{l}}{R}\right) \\
+  &=v(R)\left(\frac{y\cos{l}-x\sin{l}}{\sqrt{x^2+y^2}}\right)\;.
+  \label{eq:vel-dot}
+\end{align}
+This expression gives the component of velocity in the \(\mathbf{\hat{d}}\) direction for any \((x,y)\). In order for this expression to be of any use in calculating the Doppler shift from the Mopra data, the coordinates need to be constained to the line of sight. The equation for the line of sight is given in vector form as:
+\begin{equation}
+  \lambda(d,l)=(d\cos{l}-R_0,d\sin{l})\;\,.
+\end{equation}
+Substituting the \(x\)- and \(y\)-coordinates from this expression in to Eq.~\eqref{eq:vel-dot} and expanding gives
+\begin{equation}
+  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}\;\,.
+\end{equation}
+This expression only yields the absolute motion in the galaxy, and it is easy to see that for \(d=0\), \(v(0)=v(R)\sin{l}\) -- the sun's component of velocity along the line of sight. Subtracting this value gives us the equation used in the analysis of Mopra data:
+\begin{equation}
+  v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}\;\,.
+\end{equation}
 
 \printbibliography[heading = bibintoc] % Include bibliography entry in ToC
 
