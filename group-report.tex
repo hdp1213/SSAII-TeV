@@ -144,11 +144,11 @@ More words! We need more words on this page! There's this problem I'm seeing whe
 \subsection{Galactic rotation}
 \label{sec:gal-rot}
 \paragraph{}
-The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on co-linear objects. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. See Appendix~\ref{app:doppler} for the derivation. Hence, the velocity of an object along the line of sight with galactic latitude \(l\) is given by
+The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on co-linear objects. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. As derived in Appendix~\ref{app:doppler}, the velocity of an object along the line of sight with galactic latitude \(l\) is given by
 \begin{equation}
   v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}\;\,,
 \end{equation}
-where the distance from the sun to the galactic centre (GC) is \(R_0\), and distance from the sun to the object of interest is \(d\). This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance \(R\) from the GC, and for the sake of simplicity in this report is taken to be a constant \(v(R)=\unit{220}{\kilo\metre\usk\reciprocal\second}\) (CITE-REF). The distance from the GC is also taken to be \(R_0=\unit{8}{\kilo\parsec}\) (CITE-REF).
+where the distance from the sun to the galactic centre (GC) is \(R_0\), and distance from the sun to the object of interest is \(d\). This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance \(R\) from the GC, and for the sake of simplicity in this report is taken to be a constant \(v(R)=\unit{220}{\kilo\metre\usk\reciprocal\second}\), as suggested by \textcite{Kerr:1986}. They also suggest a value for the distance from the GC to be \(R_0=\unit{8.5}{\kilo\parsec}\).
 
 \begin{figure}[H]
   \centering
@@ -165,22 +165,30 @@ Data analysis is coming first. We talk about many things including how we manage
 \paragraph{}
 Yes, keem em cumming!!
 
+\subsection{Kinematics}
+\paragraph{}
+Reece, get your bubble butt over here and do things.
+
+\subsection{CO clouds}
+\paragraph{}
+general words!!
+
 \section{Results and discussion}
 \paragraph{}
 This is where we talk aout all the resuts we get from our data analysis, probably a good idea to cover the data analysis first and all of that so that way things make more sense here. Results should relly not even be in here lel.
 
-\subsection{Source candidates}
+\subsection{HESS J1632-479}
 \paragraph{}
-Here are some of the candidates for the gamma ray sources observed.
+Here are the things for this source. Probably include a picture of the source just as a nice ``here is thing''. Include sources in subsubsections here thanks.
 
-\subsubsection{HESS J1632-479}
+\subsection{HESS J1634-472}
 \paragraph{}
-Here are the things for this source. Probably include a picture of the source just as a nice ``here is thing''.
+There's an intersting pulsar IGR J16358-4726, but the two WR*s near that pulsar are pretty awful.
 
 % I don't know if this is the best place for this stuff yet. It's kinda a result, kinda analysis
-\subsection{IGR J16358-4726}
+\subsubsection{IGR J16358-4726}
 \paragraph{}
-Also known as [KRL2007b] 194, this object is believed to be an x-ray binary, specifically of the variety which features a neutron star orbiting what is likely a main sequence star \parencite{Falanga:2011}. Etc etc this s-etc-ion under construction.
+Also known as [KRL2007b] 194, this object is a transient x-ray binary system, with a Be star companion \parencite{Falanga:2011}. Reece, list your kinematic analysis in here damnit, or the results of that from the analysis.
 
 \section{Conclusions}
 \paragraph{}
@@ -255,6 +263,14 @@ Substituting the \(x\)- and \(y\)-coordinates from this expression in to Eq.~\eq
 This expression only yields the absolute motion in the galaxy, and it is easy to see that for \(d=0\), \(v(0)=v(R)\sin{l}\) -- the sun's component of velocity along the line of sight. Subtracting this value gives us the equation used in the analysis of Mopra data:
 \begin{equation}
   v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}\;\,.
+\end{equation}
+In order to compute distances for a given velocity, the above equation can be rearranged to give
+\begin{equation}
+  d=R_0\left(\cos{l}\pm|\sin{l}|\sqrt{v_{rel}^2-1}\right)\;,
+\end{equation}
+where \(v_{rel}\) is `relative' velocity, given by
+\begin{equation}
+  v_{rel}=\frac{v(R)}{v_{los}+v(R)\sin{l}}\;\,.
 \end{equation}
 
 \printbibliography[heading = bibintoc] % Include bibliography entry in ToC
