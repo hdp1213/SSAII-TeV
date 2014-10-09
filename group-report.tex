@@ -9,7 +9,7 @@
 \usepackage{multicol}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
 \usepackage[cdot, amssymb]{SIunits}
-\usepackage{aas_macros}
+\usepackage{aasmacros}
 
 % listings, xcolor
 \lstset{language=Matlab,
@@ -71,14 +71,14 @@
 
   \vspace{1.5em}
 
-  \textsc{A.~K. Child\footnote{Featured telescopes} \quad R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation} \quad C.~M. Roe-Simons\footnote{Cosmic ray sources}}
+  \textsc{A.~K. Child\footnote{Featured telescopes, RIP} \quad R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation} \quad C.~M. Roe-Simons\footnote{Cosmic ray sources, RIP}}
 \end{center}
 
 \vspace{1.5em}
 
 \begin{minipage}{0.93\textwidth}
   \begin{abstract}
-  This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions. Bro!!
+  This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions.
   \end{abstract}
 \end{minipage}
 
@@ -89,7 +89,7 @@
 \begin{multicols}{2}
 \section{Introduction}
 \paragraph{}
-Words words words, quick run-down of gamma rays and really high ones, just pretty much do a Gavin and copy stuff from Gavin's slides and so on and so forth.
+Words words words, quick run-down of gamma rays and really high ones, just pretty much do a Gavin and copy stuff from Gavin's slides and so on and so forth. TeV sources are among the most energetic sources known to exist in the [galaxy/universe/multiverse]
 
 \section{Theory}
 \paragraph{}
@@ -178,7 +178,7 @@ general words!!
 
 \section{Source candidates}
 \paragraph{}
-This is where we talk about all the results we get from our data analysis, probably a good idea to cover the data analysis first and all of that so that way things make more sense here. Results should relly not even be in here lel.
+During the analysis of CO data from Mopra, as well as using the SIMBAD catalog to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed, with their effect on the overall gamma ray emission also taken into consideration, and so on and so forth.
 
 \subsection{HESS J1632-479}
 
@@ -190,7 +190,7 @@ This is where we talk about all the results we get from our data analysis, proba
 \end{figure}
 
 \paragraph{}
-Here are the things for this source. Probably include a picture of the source just as a nice ``here is thing''. Include sources in subsubsections here thanks.
+An object worthy of attention within this source is VVV CL074, a Wolf-Rayet open star cluster, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star (WR*) with prominent nitrogen lines in its spectra, or an O-type star with some spectral lines in it as well, probably. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \(\unit{6.8}{\kilo\parsec}\). This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so that it looks like an O-type star, or something like that. The cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \(\unit{6}{\kilo\parsec}\), meaning it is massive and also far away, so energy comes streaming out of it somehow. It's interesting enough to mention. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster. It's a pretty small cluster in terms of angular size, but hey, things to do, people to meat.
 
 \subsection{HESS J1634-472}
 
@@ -226,7 +226,7 @@ The kinematic analysis of the gas bubble around this pulsar gives a figure of \_
 \end{figure}
 
 \paragraph{}
-Possible sources for this gamma ray source
+Possible sources for this gamma ray source. Kyle get your butt in here with that paper that answers this question. Yay, free research.
 
 \section{Conclusions}
 \paragraph{}
@@ -284,7 +284,7 @@ In order to compute distances for a given velocity, the above equation can be re
 \end{equation}
 where \(v_{rel}\) is `relative' velocity, given by
 \begin{equation}
-  v_{rel}=\frac{v(R)}{v_{los}+v(R)\sin{l}}\;\,.
+  v_{rel}=\frac{v(R)}{v_{los}+v(R_0)\sin{l}}\;\,.
 \end{equation}
 
 \section{Derivation of kinetic energy of expanding bubble}
