@@ -1,59 +1,61 @@
 \documentclass[a4paper, titlepage, oneside]{article}
+
 \usepackage[utf8]{inputenc}
 \usepackage[australian]{babel}
-\usepackage{csquotes}
-\usepackage[vmargin = 2cm, hmargin = 2cm]{geometry}
-\usepackage{amsmath,amssymb}
-\usepackage{graphicx, epstopdf, listings, csvsimple, float, xcolor}
-\usepackage[allcolors = blue, colorlinks = true, pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
+\usepackage[vmargin = 2 cm, hmargin = 2 cm]{geometry}
 \usepackage{multicol}
-\usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
+\usepackage{csquotes}
+\usepackage{amsmath, amssymb}
 \usepackage[cdot, amssymb]{SIunits}
+\usepackage{graphicx, epstopdf, float}
 \usepackage{aasmacros}
+\usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
+\usepackage[colorlinks = true, pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
 
-% listings, xcolor
-\lstset{language=Matlab,
-    commentstyle=\color{gray}\textit,
-    stringstyle=\color{purple},
-    showstringspaces=false,
-    numbers=left,
-    breaklines=true,
-    breakatwhitespace=true,
-    aboveskip=0pt,
-    belowskip=20pt}
+% \usepackage{listings}
+% \usepackage{xcolor}
+% \usepackage{csvsimple}
 
-% Bibliography setup
+% inputenc  : UTF-8 support for non-ASCII characters
+% babel     : set language, for packages that need it
+% geometry  : page margins
+% multicol  : multiple columns
+% csquotes  : context-sensitive quotes
+% amsmath   : maths
+% amssymb   : maths (\square redefined by SIunits)
+% SIunits   : management of SI units; encourage using \unit{value}{units} command whenever possible
+% graphicx  : \includegraphic
+% epstopdf  : use of eps files in document
+% float     : float graphics
+% aasmacros : CUSTOM - assumes user has aasmacros.sty installed
+% biblatex  : bibliography
+% hyperref  : in-document links
+
+% listings  : import external code
+% xcolor    : more powerful engine for colour formatting
+% csvsimple : import csv tables
+
+% biblatex setup
 \renewcommand{\nameyeardelim}{\addcomma\addspace} % Change delimiter for in-line citations to include a comma
 \addbibresource{group-report.bib}
 
-% inputenc : UTF-8 support for non-ASCII characters
-% babel   : set language, for packages that need it
-% csquotes  : context-sensitive quotes
-% geometry  : page margins
-% amsmath : maths
-% amssymb : maths (\square redefined by SIunits)
-% graphicx  : \includegraphic
-% epstopdf  : use of eps files in document
-% hyperref  : in-document links
-% listings  : import external code
-% csvsimple : import csv tables
-% float   : float graphics
-% xcolor  : use colour formatting
-% biblatex : bibliography
-% SIunits : management of SI units; encourage using \unit{value}{units} command whenever possible
+% hyperref setup
+% \hypersetup{allcolors = blue} % Override all link colours
+% \hypersetup{hidelinks} % Links will be shown with neither boxes nor colours
 
 % Custom macros
 \newcommand{\elem}[2]{\textsuperscript{#1}{#2}}
 \newcommand{\molec}[2]{\ensuremath{\text{#1}_{#2}}}
+\newcommand{\ion}[2]{#1~\smallcaps{#2}} % Must use lowercase Roman numerals eg, \ion{H}{ii}
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 \newcommand{\smass}{\mathrm{M_\odot}}
 \newcommand{\parsec}{\mathrm{pc}}
 
-% Document proper
+% Document
 \begin{document}
 \title{\textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes}}
 \author{R.~M. Harvey \and K.~T. Leaver \and H.~D. Poulter}
-\date{7 October 2014} %Leave blank to print no date, or you can type in the desired date
+\date{13 October 2014} %Leave blank to print no date, or you can type in the desired date
 \maketitle
 
 \setcounter{page}{1}
@@ -82,9 +84,7 @@
   \end{abstract}
 \end{minipage}
 
-\vspace{1em} % What the heck man this looks trash
-% fuck u m8 every paper i've read has a neat space under the abstract
-% Apologies I thought it did something else. This looks good
+\vspace{1em}
 
 \begin{multicols}{2}
 \section{Introduction}
@@ -158,7 +158,7 @@ where \(\Delta l\) is the maximum angular width of the bubble in degrees, \(\rho
 \subsection{CO as a tracer for molecular hydrogen}
 \label{sec:co}
 \paragraph{}
-The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having a parallel spins and them having anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of 21 cm. Molecular Hydrogen has very weak emission lines due to it's high symmetry, and at the extremely low molecular cloud temperatures of  $\sim$10 K, molecular hydrogen is completely undetectable. Thankfully Carbon Monoxide occurs alongside $H_2$ in a mostly uniform ratio throughout our galaxy (referencydoo here). The CO gets hit by neighbouring molecules and sleep time now
+The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having a parallel spins and them having anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of \unit{21}{\centi\metre}. Molecular hydrogen has very weak emission lines due to its high symmetry, and at the extremely low molecular cloud temperatures of \(\sim\)\unit{10}{\kelvin}, molecular hydrogen is completely undetectable. Thankfully, carbon monoxide occurs alongside \molec{H}{2} in a mostly uniform ratio throughout our galaxy (referencydoo here). The CO gets hit by neighbouring molecules and sleep time now
 
 
 \section{Data analysis}
