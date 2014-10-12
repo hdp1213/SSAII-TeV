@@ -10,7 +10,7 @@
 \usepackage{graphicx, epstopdf, float}
 \usepackage{aasmacros}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
-\usepackage[colorlinks = true, pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
+\usepackage[pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
 
 % \usepackage{listings}
 % \usepackage{xcolor}
@@ -73,7 +73,7 @@
 
   \vspace{1.5em}
 
-  \textsc{A.~K. Child\footnote{Featured telescopes, RIP} \quad R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation} \quad C.~M. Roe-Simons\footnote{Cosmic ray sources, RIP}}
+  R.~M. Harvey\footnote{Molecular clouds and cosmic ray interactions} \quad K.~T. Leaver\footnote{\elem{12}{CO} and \elem{13}{CO} as tracers} \quad H.~D. Poulter\footnote{Galactic rotation, Noise anaylsis, HESS J1632-479}
 \end{center}
 
 \vspace{1.5em}
@@ -89,7 +89,7 @@
 \begin{multicols}{2}
 \section{Introduction}
 \paragraph{}
-Words words words, quick run-down of gamma rays and really high ones, just pretty much do a Gavin and copy stuff from Gavin's slides and so on and so forth. TeV sources are among the most energetic sources known to exist in the [galaxy/universe/multiverse]
+TeV gamma-ray sources are among the most energetic sources known to exist in the [galaxy/universe/multiverse]. They are theorised to arise from cosmic ray sources (CITE-REF)
 
 \section{Theory}
 \paragraph{}
@@ -138,7 +138,7 @@ where the distance from the sun to the galactic centre (GC) is \(R_0\), and dist
 \paragraph{}
 The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen (\molec{H}{2}), which for reasons to be discussed in Section~\ref{sec:co} is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer \parencite{Glover:2011}.
 
-Gas and dust formations with a total mass between \(10^3\) and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter. \parencite{Murray:2011} ``Diameter'' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \(2\e{-20}\) to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre \parencite{Ferriere:2001}.
+Gas and dust formations with a total mass between \(10^3\) and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter \parencite{Murray:2011}. `Diameter' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \(2\e{-20}\) to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre \parencite{Ferriere:2001}.
 
 \subsubsection{Interactions with cosmic rays}
 \paragraph{}
@@ -163,11 +163,18 @@ The majority of the hydrogen in the galaxy is in either atomic or molecular form
 
 \section{Data analysis}
 \paragraph{}
-Data analysis is coming first. We talk about many things including how we managed to reduce the noise in the \texttt{.fits} files we used to make the analysis. Yeas!
+In this section, analytical techniques such as noise analysis, kinematic analysis and analysis of the Mopra CO data are outlined and discussed.
 
 \subsection{Noise analysis}
 \paragraph{}
-Yes, keem em cumming!!
+A vital part to the analysis of data from Mopra, HESS and other data sources was noise analysis. Noise analysis involved estimating the level of background noise associated with each data set, and making judgements regarding the cut-off level for contours. Fig.~\ref{fig:noise} shows a schematic idealisation of the histograms for the data sources used in the report. In order to plot accurate contours of gas clouds, the levels had to be set so that background counts were effectively removed for proper analysis of the gas cloud. As each data source has had background counts subtracted from the data, there will be an associated background count which will be roughly distributed as a Gaussian curve due to its random nature, as seen on Fig.~\ref{fig:noise}. In order to only plot contours on the signal from this histogram, and not the background noise, we considered the standard deviation \(\sigma\) of the background noise. As we expected the signal counts for the sources to be in the positive domain, we considered the negative part of the histogram and estimated the value of the standard deviation \(\sigma\) from the approximate `bell curve' present in the nagative domain of the histogram. In order to be sure that only the signal was being plotted, the value for \(\sigma\) was doubled, which was then used for the lower contour limit which meant for the normally-distributed background noise, only 2.3\% of the noise would be included in the contour levels. This allowed a further analysis on the sources to only be considering the signal from the various sources, with negligable background noise effects.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \columnwidth]{figures/noise-analysis}
+  \caption{Representative graph of the signal histogram}
+  \label{fig:noise}
+\end{figure}
 
 \subsection{Kinematics}
 \paragraph{}
@@ -175,11 +182,11 @@ Reece, get your bubble butt over here and do things.
 
 \subsection{CO clouds}
 \paragraph{}
-general words!!
+Talk about the use of \elem{12}{C}O to find areas of bulk cloud structures, as well as \elem{13}{C}O to confirm these areas. It would also be worth a bit of discussion about where the CO clouds were located in general, I guess? What sorts of analysis did we really do on these clouds except finding areas of cloud line-up with various sources and/or other data sets. Could be worth putting a table in here like that on the docs just listing the observations made of the Mopra data. That sounds like an excellent idea, Harry. That'll go into an appendix for sure if I can't find out a way of making tables or figures in general span multiple columns. Look into using the \texttt{wrapfig} package maybe?
 
 \section{Source candidates}
 \paragraph{}
-During the analysis of CO data from Mopra, as well as using the SIMBAD catalog to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed, with their effect on the overall gamma ray emission also taken into consideration, and so on and so forth.
+During the analysis of CO data from Mopra, as well as using the SIMBAD catalog to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed alongside their possible effect on the gamma-ray emission measured from HESS. Also, when are we going to chuck in various energy fluxes measured from the HESS sources, should those go in the part before the source candidates are listed for each source? I'll slap 'em in beforehand, yeah.
 
 \subsection{HESS J1632-479}
 
@@ -191,7 +198,15 @@ During the analysis of CO data from Mopra, as well as using the SIMBAD catalog t
 \end{figure}
 
 \paragraph{}
-An object worthy of attention within this source is VVV CL074, a Wolf-Rayet open star cluster, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star (WR*) with prominent nitrogen lines in its spectra, or an O-type star with some spectral lines in it as well, probably. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \(\unit{6.8}{\kilo\parsec}\). This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so that it looks like an O-type star, or something like that. The cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \(\unit{6}{\kilo\parsec}\), meaning it is massive and also far away, so energy comes streaming out of it somehow. It's interesting enough to mention. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster. It's a pretty small cluster in terms of angular size, but hey, things to do, people to meat.
+Words about the gamma-ray source in question, and its possible source candidates goes here. The source candidates for this particular gamma-ray source include a Wolf-Rayet cluster, VVV CL074, and just Wolf-Rayet stars in general around the area. Probably not the pulsar or SNR, but I'll chuck in a discussion of the two anyway for more words and all that. Also, because anything's worth discussing when the possible source of these gamma-rays is so mysterious and spoopy.
+
+\subsubsection{VVV CL074}
+\paragraph{}
+An object worthy of attention within this source is VVV CL074, a Wolf-Rayet open star cluster discovered by \textcite{Chene:2013}, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star (WR*) with prominent nitrogen lines in its spectra, or an O-type star with interesting spectral lines in it as well. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \(\unit{6.8}{\kilo\parsec}\). This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so it would seem to be an O-type star.
+
+Another intersting star is VVV CL074 3, with spectral classification WN8. What makes this star interesting lies in a paper by \textcite{Foellmi:2002}, which suggests that WR* of spectral type WN8 could be exotic Thorne-Zytkow objects. These objects are formed in binary systems where one companion star goes supernova, leaving a neutron star or blackhole behind. Due to the close proximity of the two stars, and the inherent `kick' given to the projenitor star after going supernovae, this could push the two objects into each other, undergoing a merge event where the companion star now contains the neutron star or blackhole, forcing it to expand. These sorts of objects could be a source of high energy particles or something of the ilk.
+
+As a whole, the cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \(\unit{6}{\kilo\parsec}\), meaning it is massive and also far away, so energy comes streaming out of it somehow. It's interesting enough to mention. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster. It's a pretty small cluster in terms of angular size, but hey, things to do, people to meat.
 
 \subsection{HESS J1634-472}
 
