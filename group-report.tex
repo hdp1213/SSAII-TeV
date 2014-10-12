@@ -7,10 +7,11 @@
 \usepackage{csquotes}
 \usepackage{amsmath, amssymb}
 \usepackage[cdot, amssymb]{SIunits}
-\usepackage{graphicx, epstopdf, float}
+\usepackage{graphicx, float}
+\usepackage[outdir = ./build/]{epstopdf}
 \usepackage{aasmacros}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
-\usepackage[pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
+\usepackage[colorlinks = true, pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
 
 % \usepackage{listings}
 % \usepackage{xcolor}
@@ -25,8 +26,8 @@
 % amssymb   : maths (\square redefined by SIunits)
 % SIunits   : management of SI units; encourage using \unit{value}{units} command whenever possible
 % graphicx  : \includegraphic
-% epstopdf  : use of eps files in document
 % float     : float graphics
+% epstopdf  : use of eps files in document
 % aasmacros : CUSTOM - assumes user has aasmacros.sty installed
 % biblatex  : bibliography
 % hyperref  : in-document links
@@ -105,14 +106,10 @@ Fun! These titles are all outdated! We won't use these!
 
 \subsection{Featured telescopes}
 \paragraph{}
-Alisha ain't no child, no siree! I ran out of shitty announcer puns, forgive me! Tele-no-scope 360 xboxs swag!!!
-
-More words! We need more words on this page! There's this problem I'm seeing where the paragraph spacing gets all wide and bad because \LaTeX~doesn't think there's enough here and stretches things out. Gotta have lotsa words.
+It is vital that we mention how the data is presented to us: images where PIXEL VALUES are representative of NUMBER OF COUNTS.
 
 \subsection{Cosmic ray sources}
 \paragraph{}
-Go Coen! Goen! Wow that was awful!
-
 Whoa! Need a whole lot of words right here very quickly. Okay let's see um.
 
 First, you must spread a thick layer of peanut butter onto the white part of a slice of bread. You can only spread the peanut butter on the white part, and the white part only. You may only spread peanut butter on one side. Spreading peanut butter on both sides will provide an inferior sandwich. Next, you must spread a thick layer of jam onto the white part of a slice of bread. You can only spread the jam on the white part, and the white part only. You may only spread jam on one side. Spreading jam on both sides will provide an inferior sandwich. You cannot spread jam onto the same slice of bread onto which you have spread peanut butter. Also, you cannot spread peanut butter or jam onto more than one slice of bread, as this will provide an undesired excess of either ingredient. Additionally, only peanut butter and jam can be spread onto these slices of bread; no other ingredient will suffice, and no substitute can be used in a sandwich that is to be legitimately recognized as a peanut butter and jam sandwich. Likewise, only bread may be the substance upon which the peanut butter and jam are spread, as anything else does not fit the standards of a peanut butter and jam sandwich; if the peanut butter and jam are spread onto a culinary medium that isn’t bread, the meal at hand simply is not a peanut butter and jam sandwich. Once you have accomplished spreading a thin layer of peanut butter onto the white of one side of one slice of bread, and likewise has been accomplished using raspberry jam on a separate slice of bread, you must match the slices of bread up to each other, forming a peanut butter and jam sandwich. In this scenario, the peanut butter-covered face of bread must be facing the jam-covered face of the second slice of bread so that the peanut butter surface touched the surface of the jam. The surface of the peanut butter is not allowed to touch a jam-less substance of bread, resulting in the jam facing outwards, and likewise applies to the jam. If a substance is found facing on the outside of the sandwich, the product will not be accepted as a peanut butter and jam sandwich. The side with peanut butter and the side with jam on it must match up and stick together to form one solid sandwich. When the eater picks up the sandwich, he or she must hold both pieces of bread at the same time, or else one slice will fall off, and eating only one slice of bread will not be recognized as the same or even similar to eating a peanut butter and jam sandwich.
@@ -155,11 +152,10 @@ The Mopra data cubes provide redshift speeds for each image slice, hence permitt
 \end{equation}
 where \(\Delta l\) is the maximum angular width of the bubble in degrees, \(\rho\) is an estimate of the mass density in \(\kilo\gram\usk\centi\metre\rpcubed\) of the gas previously occupying that volume, \(d\) is the distance to the centre of the bubble in \(\centi\metre\), and \(v_1\) and \(v_2\) are the redshift speeds of the front and back of the bubble in \(\metre\usk\reciprocal\second\).
 
-\subsection{CO as a tracer for molecular hydrogen}
+\subsection{Carbon monoxide as a tracer for molecular hydrogen}
 \label{sec:co}
 \paragraph{}
-The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having a parallel spins and them having anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of \unit{21}{\centi\metre}. Molecular hydrogen has very weak emission lines due to its high symmetry, and at the extremely low molecular cloud temperatures of \(\sim\)\unit{10}{\kelvin}, molecular hydrogen is completely undetectable. Thankfully, carbon monoxide is asymmetric and occurs alongside \molec{H}{2} in a mostly uniform ratio throughout our galaxy \parencite{Neininger:1998}. The CO gets hit by neighbouring molecules and gains energy in either rotational or vibrational stretching forms. These energy modes are quantised, and when the rotation or vibration drops an energy level a photon will be emmited. Because each isotopologue will have a different moment of intertia and therefore different energy levels, the frequency of the photon will depend on both the isotopologue and the energy levels between which the transition occurs. Because of this it is possible to look for specific isotopologues and specific energy transistions, which, knowing how they are distributed with \molec{H}{2} , allows the mapping of molecular clouds.
-
+The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having parallel and anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of \unit{21}{\centi\metre}. Molecular hydrogen (\molec{H}{2}) has very weak emission lines due to its high symmetry, and at the extremely low molecular cloud temperatures of \(\sim\)\unit{10}{\kelvin}, molecular hydrogen is completely undetectable. Thankfully, carbon monoxide (CO) is asymmetric and occurs alongside \molec{H}{2} in a mostly uniform ratio throughout our galaxy \parencite{Neininger:1998}. The CO is hit by neighbouring molecules and gains energy in either rotational or vibrational stretching forms. These energy modes are quantised, and when the rotation or vibration drops an energy level a photon will be emitted. Because each isotopologue will have a different moment of inertia and therefore different energy levels, the frequency of the photon will depend on both the isotopologue and the energy levels between which the transition occurs. Because of this it is possible to look for specific isotopologues and specific energy transitions, which, knowing how they are distributed with \molec{H}{2}, allows the mapping of molecular clouds.
 
 \section{Data analysis}
 \paragraph{}
@@ -167,7 +163,7 @@ In this section, analytical techniques such as noise analysis, kinematic analysi
 
 \subsection{Noise analysis}
 \paragraph{}
-A vital part to the analysis of data from Mopra, HESS and other data sources was noise analysis. Noise analysis involved estimating the level of background noise associated with each data set, and making judgements regarding the cut-off level for contours. Fig.~\ref{fig:noise} shows a schematic idealisation of the histograms for the data sources used in the report. In order to plot accurate contours of gas clouds, the levels had to be set so that background counts were effectively removed for proper analysis of the gas cloud. As each data source has had background counts subtracted from the data, there will be an associated background count which will be roughly distributed as a Gaussian curve due to its random nature, as seen on Fig.~\ref{fig:noise}. In order to only plot contours on the signal from this histogram, and not the background noise, we considered the standard deviation \(\sigma\) of the background noise. As we expected the signal counts for the sources to be in the positive domain, we considered the negative part of the histogram and estimated the value of the standard deviation \(\sigma\) from the approximate `bell curve' present in the nagative domain of the histogram. In order to be sure that only the signal was being plotted, the value for \(\sigma\) was doubled, which was then used for the lower contour limit which meant for the normally-distributed background noise, only 2.3\% of the noise would be included in the contour levels. This allowed a further analysis on the sources to only be considering the signal from the various sources, with negligable background noise effects.
+A vital aspect of the analysis of data from HESS, Mopra, and other data sources involved estimating the level of background noise associated with each data set, and making judgements regarding the cut-off level where the data became valid signal. Fig.~\ref{fig:noise} shows a schematic idealisation of the histograms for the data sets used in the report. In order to plot accurate contours of gas clouds, and hence properly analyse them, the levels had to be set so that background counts were effectively removed. Each data set has already had a defined number of background counts subtracted from it, thus leading to the existence of points with negative numbers of counts. This in turn meant the formation of an associated background count roughly distributed as a Gaussian curve due to its random nature, as seen in Fig.~\ref{fig:noise}. In order to only plot contours on values considered to be signal, and correctly ignore the background noise, we considered the standard deviation \(\sigma\) of the background. As we expected the number of counts for the signal to be in the positive domain, we focused on the negative side of the histogram and used it to estimate the value of the standard deviation \(\sigma\) in the background noise, using the approximate ``bell curve'' present in the negative domain. In order to be more certain that only the signal was then considered, the value for \(\sigma\) was doubled, and this used as the lower contour limit. Thus, for the normally-distributed background noise, only 2.3\% of the noise would be included in the statistically-significant contour levels. This allowed further analyses on the sources to clearly identify the signal from the noise, and hence have much stronger accuracy.
 
 \begin{figure}[H]
   \centering
@@ -178,17 +174,17 @@ A vital part to the analysis of data from Mopra, HESS and other data sources was
 
 \subsection{Kinematics}
 \paragraph{}
-Several gas clouds have formations highly suggestive of bubbles formed due to supernova explosions. Using the techniques outlined in Section~\label{sec:kinetic}, we subsequently calculate the energies of those bubbles.
+Several gas clouds have formations highly suggestive of bubbles formed due to supernova explosions. Using the techniques outlined in Section~\ref{sec:kinetic}, we subsequently calculate the energies of those bubbles.
 
 (Two figures for distance of the main IGR object: 5-6 and 12-13, cite \parencite{Lutovinov:2005})
 
-\subsection{CO clouds}
+\subsection{Carbon monoxide clouds}
 \paragraph{}
 Talk about the use of \elem{12}{C}O to find areas of bulk cloud structures, as well as \elem{13}{C}O to confirm these areas. It would also be worth a bit of discussion about where the CO clouds were located in general, I guess? What sorts of analysis did we really do on these clouds except finding areas of cloud line-up with various sources and/or other data sets. Could be worth putting a table in here like that on the docs just listing the observations made of the Mopra data. That sounds like an excellent idea, Harry. That'll go into an appendix for sure if I can't find out a way of making tables or figures in general span multiple columns. Look into using the \texttt{wrapfig} package maybe?
 
 \section{Source candidates}
 \paragraph{}
-During the analysis of CO data from Mopra, as well as using the SIMBAD catalog to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed alongside their possible effect on the gamma-ray emission measured from HESS. Also, when are we going to chuck in various energy fluxes measured from the HESS sources, should those go in the part before the source candidates are listed for each source? I'll slap 'em in beforehand, yeah.
+During the analysis of CO data from Mopra, as well as using the SIMBAD catalogue to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed alongside their possible effect on the gamma-ray emission measured from HESS. Also, when are we going to chuck in various energy fluxes measured from the HESS sources, should those go in the part before the source candidates are listed for each source? I'll slap 'em in beforehand, yeah.
 
 \subsection{HESS J1632-479}
 
@@ -224,7 +220,7 @@ There's an intersting pulsar IGR J16358-4726, but the two WR*s near that pulsar 
 
 \subsubsection{IGR J16358-4726}
 \paragraph{}
-Also known as [KRL2007b] 194, this object is well within the bounds of HESS J1634-472 as depicted in Figure~\ref{fig:hess34}. Originally discovered in 2003, before later being serendipitously observed by the Chandra X-Ray Observatory and classified as an x-ray transient \parencite{Patel:2004}. These are
+Also known as [KRL2007b] 194, this object is well within the bounds of HESS J1634-472 as depicted in Fig.~\ref{fig:hess34}. Originally discovered in 2003, before later being serendipitously observed by the Chandra X-Ray Observatory and classified as an x-ray transient \parencite{Patel:2004}. These are
 
 Blah blah it has been proposed something something one of only a handful (at this time) of symbiotic x-ray binaries (SyXBs) -- a new subclass of low-mass x-ray binary system \parencite{Nespoli:2010}. SyXBs feature a compact object such as a neutron star orbiting and accreting matter from an M-type red giant star,
 
