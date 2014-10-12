@@ -12,6 +12,7 @@
 \usepackage{aasmacros}
 \usepackage[backend = biber, style = authoryear, alldates = iso8601]{biblatex}
 \usepackage[colorlinks = true, pdfpagemode = UseNone, pdfstartview = FitH]{hyperref}
+\usepackage{setspace}
 
 % \usepackage{listings}
 % \usepackage{xcolor}
@@ -62,7 +63,7 @@
 \title{\textbf{Searching for molecular gas towards TeV gamma-ray sources: Analysing 3D data cubes of the molecular gas tracer carbon monoxide with images from the HESS gamma-ray telescopes}}
 \author{R.~M. Harvey \and K.~T. Leaver \and H.~D. Poulter}
 \date{13 October 2014} %Leave blank to print no date, or you can type in the desired date
-\maketitle
+\input{title.tex}
 
 \setcounter{page}{1}
 \pagenumbering{roman}
@@ -86,28 +87,28 @@
 
 \begin{minipage}{0.93\textwidth}
   \begin{abstract} % finish properly
-  This report is about finding possible source candidates for HESS J1632-479, HESS J1634-472 and HESS J1640-465 through studying molecular clouds towards these sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report, before describing the methods used in analysing the data,
+  This report is about finding possible source candidates for HESS J1632-479, HESS J1634-472 and HESS J1640-465 through studying molecular clouds towards these sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report, before describing the methods used in analysing the data, and then presenting the findings of the data analysis with regards to source candidates for each gamma-ray source. The report found that some sources in HESS J1632-479 and HESS J1640-465 were energetic enough to be linked to the large gamma-ray output
   \end{abstract}
 \end{minipage}
 
 \vspace{1em}
 
 \begin{multicols}{2}
-\section{Introduction} % finish properly
+\section{Introduction}
 \paragraph{}
-TeV gamma-ray sources are among the most energetic sources known to exist in the [galaxy/universe/multiverse]. They are theorised to arise from cosmic ray sources (CITE-REF)
+TeV gamma-ray sources are among the most energetic sources known to exist in the universe. They are theorised to originate from cosmic ray sources, which are some of the more exotic astrophysical objects. This report aims to cover the theory behind searching for possible explanations behind these powerful sources, as well as give insight into analytical techniques used in processing the data, leading to a final consideration of possible causes of these gamma-ray sources.
 
-\section{Theory} % finish properly
+\section{Theory}
 \paragraph{}
-This report deals with many different astrophysical concepts in its analysis and such. In order to gain a more complete understanding of the work being done, this section aims to outline them. Due to the large array of different energy schemes present in analysing TeV gamma-rays, data from different telescopes and observatories were used in producing an analysis of the results. Data from different energy regimes was required due to the large collection of possible cosmic ray sources that could result in gamma-ray emission at the TeV scale.
+This report deals with many different astrophysical concepts in its analysis and such. In order to gain a more complete understanding of the work being done, this section aims to outline them. Due to the large array of different energy schemes present in analysing TeV gamma-rays, data from different telescopes and observatories were used in producing an analysis of the results. Data from different energy regimes was required due to the large collection of possible cosmic ray sources that could result in gamma-ray emission at the TeV scale. Data from Mopra is given special treatment due to its ability to map CO distributions in three dimensions -- this effect arising from galactic rotation. Arguably more importantly however, are the mechanisms behind the different regimes of cosmic ray interactions, mostly with giant molecular clouds. A discussion of CO as a tracer for such molecular clouds is also given.
 
 \subsection{Featured telescopes}
-\paragraph{}
+\paragraph{} \label{sec:tel}
 The HESS Cherenkov Telescope system is a telescope array that detects high energy gamma rays (\(\sim\)\(3\e{10}\) to \unit{10^{14}}{\electronvolt}). We received data showing the detected intensity for the three gamma ray sources as single frame fits files, the value associated with each pixel representing the number of gamma ray counts in the energy band of the observations. This data allowed the location, intensity and extent of the three sources to be determined. The primary data used to analyse the potential source candidates for the gamma rays was gathered by the Mopra Radio Telescope. Data for both \elem{13}{C}O and \elem{12}{C}O (see section~\ref{sec:co}) was used in data cube format, where the doppler shift of the emission lines of the CO has been convcerted to relative velocity. The data cube contains several thousand frames that span \(\sim\)\unit{1000}{\kilo\meter\cdot\reciprocal\second} and are used to represent the distance to the source of the emissions.
 
 \subsection{Cosmic ray sources}
-\paragraph{}
-Cosmic rays are highly-relativistic charged particles with very large associated energies in the order of GeV-TeV (CITE?). They originate from some of the most extreme environments in the universe, and understanding this is essential in studying the sources of such particles. Cosmic rays sources act as particle accelerators, with large electric and magnetic fields accelerating charged particles to the high energies seen in space. Sources include supermassive blackholes at galactic centres, such as the one at the centre of the Milky Way \parencite{Guo:2013}, massive star clusters, supernova remnants \parencite{Vink:2013} and pulsars -- typically those that have been newly-formed and are capable of accelerating charged particles to extreme energies \parencite{Fang:2012}.
+\paragraph{} \label{sec:cr}
+Cosmic rays are highly-relativistic charged particles with very large associated energies in the order of GeV--TeV. They originate from some of the most extreme environments in the universe, and understanding this is essential in studying the sources of such particles. Cosmic rays sources act as particle accelerators, with large electric and magnetic fields accelerating charged particles to the high energies seen in space. Sources include supermassive blackholes at galactic centres, such as the one at the centre of the Milky Way \parencite{Guo:2013}, massive star clusters, supernova remnants \parencite{Vink:2013} and pulsars -- typically those that have been newly-formed and are capable of accelerating charged particles to extreme energies \parencite{Fang:2012}.
 
 Due to cosmic rays being charged in nature, their path through space will not be in a straight line like that of light. Instead, due to magnetic fields, it will change directions so when such particles are detected on Earth by air shower, their direction will not be an accurate representation of the location of the source from where they originated from \parencite{Kalli:2011}. Rather than looking directly for cosmic rays in order to find their sources, it makes more sense to look for the effect cosmic rays have on their surrounds, and draw conclusions as to their origins from those. As an example, supernova remnants (SNRs) that are capable of producing cosmic rays may also produce gamma rays as a consequence of the cosmic ray interaction with the nebula.
 
