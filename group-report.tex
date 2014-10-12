@@ -104,13 +104,15 @@ This report deals with many different astrophysical concepts in its analysis and
 
 \subsection{Featured telescopes}
 \paragraph{} \label{sec:tel}
-The HESS Cherenkov Telescope system is a telescope array that detects high energy gamma rays (\(\sim\)\(3\e{10}\) to \unit{10^{14}}{\electronvolt}). We received data showing the detected intensity for the three gamma ray sources as single frame fits files, the value associated with each pixel representing the number of gamma ray counts in the energy band of the observations. This data allowed the location, intensity and extent of the three sources to be determined. The primary data used to analyse the potential source candidates for the gamma rays was gathered by the Mopra Radio Telescope. Data for both \elem{13}{C}O and \elem{12}{C}O (see section~\ref{sec:co}) was used in data cube format, where the doppler shift of the emission lines of the CO has been convcerted to relative velocity. The data cube contains several thousand frames that span \(\sim\)\unit{1000}{\kilo\meter\cdot\reciprocal\second} and are used to represent the distance to the source of the emissions.
+The HESS Cherenkov Telescope system is a telescope array that detects high energy gamma rays (\(\sim\)\(3\e{10}\) to \unit{10^{14}}{\electronvolt}). We received data showing the detected intensity for the three gamma ray sources as single frame FITS files, the value associated with each pixel representing the number of gamma ray counts in the energy band of the observations. This data allowed the location, intensity and extent of the three sources to be determined.
+
+The primary data used to analyse the potential source candidates for the gamma rays was gathered by the Mopra Radio Telescope. Data for both carbon-12 monoxide and carbon-13 monoxide (\elem{12}{C}O and \elem{13}{C}O; see section~\ref{sec:co}) was used in data cube format, where the Doppler shift of the emission lines of the CO has been converted to relative velocity. The data cube contains several thousand frames that span \(\sim\)\unit{1000}{\kilo\meter\cdot\reciprocal\second} and are used to represent the distance to the source of the emissions.
 
 \subsection{Cosmic ray sources}
 \paragraph{} \label{sec:cr}
-Cosmic rays are highly-relativistic charged particles with very large associated energies in the order of GeV--TeV. They originate from some of the most extreme environments in the universe, and understanding this is essential in studying the sources of such particles. Cosmic rays sources act as particle accelerators, with large electric and magnetic fields accelerating charged particles to the high energies seen in space. Sources include supermassive blackholes at galactic centres, such as the one at the centre of the Milky Way \parencite{Guo:2013}, massive star clusters, supernova remnants \parencite{Vink:2013} and pulsars -- typically those that have been newly-formed and are capable of accelerating charged particles to extreme energies \parencite{Fang:2012}.
+Cosmic rays are highly-relativistic charged particles with very large associated energies in the order of GeV to TeV. They originate from some of the most extreme environments in the universe, and understanding this is essential in studying the sources of such particles. Cosmic rays sources act as particle accelerators, with large electric and magnetic fields accelerating charged particles to the high energies seen in space. Sources include supermassive black holes at galactic centres, such as the one at the centre of the Milky Way \parencite{Guo:2013}, massive star clusters, supernova remnants (SNRs) \parencite{Vink:2013} and pulsars (PSRs) -- typically those that have been newly-formed and are capable of accelerating charged particles to extreme energies \parencite{Fang:2012}.
 
-Due to cosmic rays being charged in nature, their path through space will not be in a straight line like that of light. Instead, due to magnetic fields, it will change directions so when such particles are detected on Earth by air shower, their direction will not be an accurate representation of the location of the source from where they originated from \parencite{Kalli:2011}. Rather than looking directly for cosmic rays in order to find their sources, it makes more sense to look for the effect cosmic rays have on their surrounds, and draw conclusions as to their origins from those. As an example, supernova remnants (SNRs) that are capable of producing cosmic rays may also produce gamma rays as a consequence of the cosmic ray interaction with the nebula.
+Due to cosmic rays being charged in nature, their path through space will not be in a straight line like that of light. Instead, due to magnetic fields, it will change directions so when such particles are detected on Earth by air shower, their direction will not be an accurate representation of the location of the source from which they originated \parencite{Kalli:2011}. Rather than looking directly for cosmic rays in order to find their sources, it makes more sense to look for the effect cosmic rays have on their surrounds, and draw conclusions as to their origins from those. As an example, SNRs that are capable of producing cosmic rays may also produce gamma rays as a consequence of the cosmic ray interaction with the nebula.
 
 \subsection{Galactic rotation}
 \label{sec:gal-rot}
@@ -131,7 +133,7 @@ where the distance from the LSR to the galactic centre (GC) is \(R_0\), and dist
 \subsection{Molecular clouds}
 \subsubsection{Composition and structure}
 \paragraph{}
-The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen (\molec{H}{2}), which for reasons to be discussed in Section~\ref{sec:co} is relatively difficult to detect. However, the presence of carbon monoxide (CO) is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer \parencite{Glover:2011}.
+The average density of the interstellar medium (ISM) is quite low, however the reaches of space are littered with so-called molecular clouds -- areas with gas and dust density significantly higher, such that stars can form within the material. These clouds are predominantly composed of molecular hydrogen (\molec{H}{2}), which for reasons to be discussed in Section~\ref{sec:co} is relatively difficult to detect. However, the presence of CO is significantly easier to determine, and astrophysicists presently believe it to be distributed among \molec{H}{2} in effectively equal quantities, making it an excellent tracer \parencite{Glover:2011}.
 
 Gas and dust formations with a total mass between \(10^3\) and \unit{10^7}{\smass} are called giant molecular clouds (GMCs), and tend to be anywhere from 5 to 200 parsecs in diameter \parencite{Murray:2011}. `Diameter' is a term applied fairly loosely, as the form of a GMC is not guaranteed to be even remotely spherical. Indeed, the tenuous structural qualities of GMCs mean that they can also vary greatly in density, typically from around \(2\e{-20}\) to \unit{2\e{-18}}{\gram\usk\centi\metre\rpcubed}, corresponding to approximately \(10^4\) to \(10^6\) molecules per cubic centimetre \parencite{Ferriere:2001}.
 
@@ -154,7 +156,7 @@ where \(\Delta l\) is the maximum angular width of the bubble in degrees, \(\rho
 \subsection{Carbon monoxide as a tracer for molecular hydrogen}
 \label{sec:co}
 \paragraph{}
-The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having parallel and anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of \unit{21}{\centi\metre}. Molecular hydrogen (\molec{H}{2}) has very weak emission lines due to its high symmetry, and at the extremely low molecular cloud temperatures of \(\sim\)\unit{10}{\kelvin}, molecular hydrogen is completely undetectable. Thankfully, carbon monoxide (CO) is asymmetric and occurs alongside \molec{H}{2} in a mostly uniform ratio throughout our galaxy \parencite{Neininger:1998}. The CO is hit by neighbouring molecules and gains energy in either rotational or vibrational stretching forms. These energy modes are quantised, and when the rotation or vibration drops an energy level a photon will be emitted. Because each isotopologue will have a different moment of inertia and therefore different energy levels, the frequency of the photon will depend on both the isotopologue and the energy levels between which the transition occurs. Because of this it is possible to look for specific isotopologues and specific energy transitions, which, knowing how they are distributed with \molec{H}{2}, allows the mapping of molecular clouds.
+The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having parallel and anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of \unit{21}{\centi\metre}. Molecular hydrogen has very weak emission lines due to its high symmetry, and at the extremely low molecular cloud temperatures of \(\sim\)\unit{10}{\kelvin}, molecular hydrogen is completely undetectable. Thankfully, carbon monoxide  is asymmetric and occurs alongside \molec{H}{2} in a mostly uniform ratio throughout our galaxy \parencite{Neininger:1998}. The CO is hit by neighbouring molecules and gains energy in either rotational or vibrational stretching forms. These energy modes are quantised, and when the rotation or vibration drops an energy level a photon will be emitted. Because each isotopologue (alternative form of the same molecule created by atoms having different numbers of neutrons, eg, \molec{12}{C}O and \molec{13}{C}O) will have a different moment of inertia and therefore different energy levels, the frequency of the photon will depend on both the isotopologue and the energy levels between which the transition occurs. Because of this it is possible to look for specific isotopologues and specific energy transitions, which, knowing how they are distributed with \molec{H}{2}, allows the mapping of molecular clouds.
 
 \section{Data analysis} % finish properly ? add more maybe
 \paragraph{}
@@ -203,9 +205,9 @@ Fig.~\ref{fig:bubble40} shows the formation of a bubble around SNR G338.5+00.1, 
 
 \subsection{Carbon monoxide clouds}
 \paragraph{}
-The \elem{12}{C}O and \elem{13}{C}O data cubes from Mopra were analysed slice-by-slice, with any interesting regions of gas recorded in Table~\ref{tab:mopra-obs}. The general approach to analysing the molecular gas clouds was to check for any potential line-up with the HESS gamma ray sources, as well as any bubble structures or other line-up with high energy sources. The high-energy sources considered during analysis were pulsars, supernova remnants, Wolf-Rayet stars, and O, B and A stars, with masers serving as good pointers for star-forming regions.
+The \elem{12}{C}O and \elem{13}{C}O data cubes from Mopra were analysed slice-by-slice, with any interesting regions of gas recorded in Table~\ref{tab:mopra-obs}. The general approach to analysing the molecular gas clouds was to check for any potential line-up with the HESS gamma ray sources, as well as any bubble structures or other line-up with high energy sources. The high-energy sources considered during analysis were pulsars, supernova remnants, Wolf-Rayet stars, and O-, B-, and A-type stars, with masers serving as good pointers for star-forming regions.
 
-As well as data from HESS, the Mopra data cubes were also compared against contours from ROSAT and Spitzer to explore the soft x-ray and infrared regime as well for possible indicators as to what regions the CO clouds could correspond to. Any line-up with Spitzer would imply a dense star-forming region, but no line-up was found for ROSAT data.
+As well as data from HESS, the Mopra data cubes were also compared against contours from ROSAT and Spitzer to explore the soft X-ray and infrared regime as well for possible indicators as to what regions the CO clouds could correspond to. Any line-up with Spitzer would imply a dense star-forming region, but no line-up was found for ROSAT data.
 
 \section{Source candidates} % finish properly
 \paragraph{}
@@ -221,7 +223,7 @@ During the analysis of CO data from Mopra, as well as using the SIMBAD catalogue
 \end{figure}
 
 \paragraph{}
-HESS J1634-479 has a photon flux of \unit{28.7\pm5.3\e{-12}}{\photon\usk\centi\metre\rpsquared\usk\reciprocal\second} for energies over \unit{200}{\giga\electronvolt} \parencite{Aharonian:2006}. The source candidates for this particular gamma-ray source include a gamma ray source, 2FGL J1632.4-4753c, a Wolf-Rayet cluster, VVV CL074, as well as a high-mass x-ray binary, IGR J16320-4751.
+HESS J1634-479 has a photon flux of \unit{28.7\pm5.3\e{-12}}{\photon\usk\centi\metre\rpsquared\usk\reciprocal\second} for energies over \unit{200}{\giga\electronvolt} \parencite{Aharonian:2006}. The source candidates for this particular gamma-ray source include a gamma ray source, 2FGL J1632.4-4753c, a Wolf-Rayet cluster, VVV CL074, as well as a high-mass X-ray binary, IGR J16320-4751.
 
 \subsubsection{2FGL J1632.4-4753c}
 \paragraph{}
@@ -229,15 +231,15 @@ The most likely candidate for this source would be 2FGL J1632.4-4753c, which is 
 
 \subsubsection{VVV CL074}
 \paragraph{}
-An object worthy of attention within this source is VVV CL074, a Wolf-Rayet open star cluster discovered by \textcite{Chene:2013}, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star (WR*) with prominent nitrogen lines in its spectra, or an O-type star with interesting spectral lines in it as well. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \unit{6.8}{\kilo\parsec}. This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so it would seem to be an O-type star.
+An object worthy of attention within this source is VVV CL074, an open Wolf-Rayet star cluster discovered by \textcite{Chene:2013}, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star with prominent nitrogen lines in its spectra, or an O-type star with interesting spectral lines in it as well. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \unit{6.8}{\kilo\parsec}. This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so it would seem to be an O-type star.
 
-Another intersting star is VVV CL074 3, with spectral classification WN8. What makes this star interesting lies in a paper by \textcite{Foellmi:2002}, which suggests that WR* of spectral type WN8 could be exotic Thorne-Zytkow objects. These objects are formed in binary systems where one companion star goes supernova, leaving a neutron star or blackhole behind. Due to the close proximity of the two stars, and the inherent `kick' given to the projenitor star after going supernovae, this could push the two objects into each other, undergoing a merge event where the companion star now contains the neutron star or blackhole, forcing it to expand. These sorts of objects could potentially be a source of high energy x-rays, and could serve as cosmic ray accelerators as well.
+Another intersting star is VVV CL074 3, with spectral classification WN8. What makes this star interesting lies in a paper by \textcite{Foellmi:2002}, which suggests that Wolf-Rayet stars of spectral type WN8 could be exotic Thorne-Zytkow objects. These objects are formed in binary systems where one companion star goes supernova, leaving a neutron star or black hole behind. Due to the close proximity of the two stars, and the inherent ``kick'' given to the progenitor star after going supernova, this could push the two objects into each other, undergoing a merge event where the companion star now contains the neutron star or black hole, forcing it to expand. These sorts of objects could potentially be a source of high energy X-rays, and could serve as cosmic ray accelerators as well.
 
-As a whole, the cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \unit{6}{\kilo\parsec}. No molecular clouds are present at this distance as seen by Mopra, most likely due to the large stellar winds that would be present in a cluster consisting of WR*. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster.
+As a whole, the cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \unit{6}{\kilo\parsec}. No molecular clouds are present at this distance as seen by Mopra, most likely due to the large stellar winds that would be present in a cluster consisting of Wolf-Rayet stars. Fig.~\ref{fig:hess32} shows where the bulk of these Wolf-Rayet stars are located in the cluster.
 
 \subsubsection{IGR J16320-4751}
 \paragraph{}
-IGR J16320-4751 is a high-mass x-ray binary positionally coincident with the gamma-ray source \parencite{Aharonian:2006}, and is not shown by SIMBAD in Fig~\ref{fig:hess32}. This means it is a binary system comprising of a high-mass star and a pulsar, where matter from the `donor' star is being accreted onto the pulsar, emitting hard x-rays as a result. It was found by \textcite{Lutovinov:2013} to have a distance of \unit{3.5}{\kilo\parsec}. There is no CO signal near this source using the Mopra data, which agrees with the very energetic nature of the object, as large stellar winds would blow back molecular clouds. This would also suggest the source has been present for some time for there to be no residual molecular clouds nearby. \textcite{Lutovinov:2013} also found the spectral class of the binary system to be O8I, which indicates the donor star in this system is a very massive O-type star. Although this source is very energetic, with a flux of \unit{2.995\e{35}}{\erg\usk\reciprocal\second} between \unit{17-60}{\kilo\electronvolt}, it is not emitting in the right energy band to provide the energetics seen in HESS J1632-479.
+IGR J16320-4751 is a high-mass X-ray binary positionally coincident with the gamma-ray source \parencite{Aharonian:2006} (not shown by SIMBAD in Fig~\ref{fig:hess32}). This means it is a binary system comprising of a high-mass star and a pulsar, where matter from the ``donor'' star is being accreted onto the pulsar, emitting hard X-rays as a result. It was found by \textcite{Lutovinov:2013} to have a distance of \unit{3.5}{\kilo\parsec}. There is no CO signal near this source using the Mopra data, which agrees with the very energetic nature of the object, as large stellar winds would blow back molecular clouds. This would also suggest the source has been present for some time for there to be no residual molecular clouds nearby. \textcite{Lutovinov:2013} also found the spectral class of the binary system to be O8I, which indicates the donor star in this system is a very massive O-type star. Although this source is very energetic, with a flux of \unit{2.995\e{35}}{\erg\usk\reciprocal\second} between \unit{17-60}{\kilo\electronvolt}, it is not emitting in the right energy band to provide the energetics seen in HESS J1632-479.
 
 \subsection{HESS J1634-472}
 \label{sec:hess34}
@@ -250,17 +252,24 @@ IGR J16320-4751 is a high-mass x-ray binary positionally coincident with the gam
 \end{figure}
 
 \paragraph{}
+HESS J1634–472 has a photon flux of \unit{2.38\pm0.26\e{-12}}{\photon\usk\centi\metre\rpsquared\usk\reciprocal\second} for energies over \unit{200}{\giga\electronvolt} \parencite{Aharonian:2006}. Despite the large number of Wolf-Rayet stars present, it is unlikely that any are significantly contributing to the output of this source. There are few possibilities, however an
+
+
 There's an intersting pulsar IGR J16358-4726, but the two WR*s near that pulsar are pretty awful.
+
+
+This source
+presumably belongs to the class of highly absorbed X-ray binary systems, like IGR J16320–
+4751 (discussed in the previous paragraph). Another potential counterpart of HESS J1634–472 is the recently discovered SNR
+candidate G337.2+0.1 (Combi et al. 2005), coincident with the ASCA source AX J1635.9–
+4719. However, the distances of the two objects to HESS J1634–472 renders a correlation
+unlikely.
 
 \subsubsection{IGR J16358-4726}
 \paragraph{}
 Also known as [KRL2007b] 194, this object is well within the bounds of HESS J1634-472, as depicted in Figure~\ref{fig:hess34}. Occasionally observed since the late nineties, it was not until 2003, when the object was serendipitously detected by \textcite{Patel:2004} at the Chandra X-Ray Observatory, that it was classified as an X-ray transient owing to its nature of only being visible for brief periods of time, and showing significant fluctuations in its energy output. \textcite{Nespoli:2010} proposed that IGR J16358-4726 is actually one of only a handful of symbiotic X-ray binaries (SyXBs), a new subclass of low-mass X-ray binary systems. SyXBs are believed to feature a compact object (i.e., white dwarf, neutron star, or black hole) orbiting and accreting matter from an M-type red giant star.
 
 The kinematic analysis of the gas bubble around this pulsar outlined earlier provided figures of \unit{9.34\e{42 \mathrm{~to~} 44}}{\joule} for the near solution of \unit{4.18}{\kilo\parsec} and \unit{1.78\e{44 \mathrm{~to~} 46}}{\joule} for the far solution of \unit{11.2}{\kilo\parsec}. As mentioned, supernovae typically emit around \unit{10^{44}}{\joule} \parencite{Khokhlov:1993}, so this result may actually make it far more likely that the near solution is correct, since values less than \unit{10^{44}} are much more likely than those above.
-
-\subsubsection{Wolf-Rayet stars}
-\paragraph{}
-2MASS J16345746-4704129 is 3.71 kpc
 
 \subsection{HESS J1640-465}
 
@@ -291,7 +300,7 @@ Bitch, we concluding now, making the statements that make a conclusion possible 
 
 \appendix
 
-\section{Derivation of galactic doppler shift}
+\section{Derivation of galactic Doppler shift}
 \label{app:doppler}
 \paragraph{}
 Here we derive the equation found in Section~\ref{sec:gal-rot}. Looking at Fig.~\ref{fig:doppler}, we can (probably not) see the setup we're going to be dealing with here. In order to derive the velocity along the line of sight in the galactic plane, it is necessary to first consider the velocity field of the galactic plane. With coordinates centred on the GC, the velocity field can be expressed as
@@ -386,7 +395,7 @@ Star            & 336.43 & -0.262  & -92488.2 & -85430.7 & 13 &
 Pulsar/Star     & 336.36 & -0.137  & -83047.6 & -78648.2 & 13 &
                 Activity in 13CO focused around masers and another A-type star HD 330913. Also, perhaps related to pulsar PSR J1633-4805 \\
 X-ray           & 336.88 &  0.120  & -82811.4 & -75713.9 & 12 &
-                Cloud hovering below x-ray emission \\
+                Cloud hovering below X-ray emission \\
 Maser/Pulsar    & 336.84 &  0.014  & -82548.6 & -68353.5 & 12 &
                 Sharp gradient around PSR J1635-4735 \\
 Pulsar          & 337.10 & -0.088  & -78605.5 & -74662.4 & 12 &
@@ -406,6 +415,6 @@ SNR/Pulsar      & 338.48 &  0.020  &  -43994  & -36458.3 & 12/13 &
 \label{tab:mopra-obs}
 \end{table}
 \vspace{-1em}
-{\footnotesize The \(z_1\) and \(z_2\) columns show the doppler shifts of the slices at the beginning and end of each observation in the data cube. The \elem{x}{C}O column shows observations made in either \elem{12}{C}O, \elem{13}{C}O, or both.}
+{\footnotesize The \(z_1\) and \(z_2\) columns show the Doppler shifts of the slices at the beginning and end of each observation in the data cube. The \elem{x}{C}O column shows observations made in either \elem{12}{C}O, \elem{13}{C}O, or both.}
 
 \end{document}
