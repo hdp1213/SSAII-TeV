@@ -44,6 +44,9 @@
 % \hypersetup{allcolors = blue} % Override all link colours
 % \hypersetup{hidelinks} % Links will be shown with neither boxes nor colours
 
+% table setup
+\renewcommand{\arraystretch}{1.2} % table row spacing increases!
+
 % Custom macros
 \newcommand{\elem}[2]{\textsuperscript{#1}{#2}}
 \newcommand{\molec}[2]{\ensuremath{\text{#1}_{#2}}}
@@ -51,6 +54,8 @@
 \newcommand{\e}[1]{\ensuremath{\times 10^{#1}}}
 \newcommand{\smass}{\mathrm{M_\odot}}
 \newcommand{\parsec}{\mathrm{pc}}
+\newcommand{\erg}{\mathrm{erg}}
+\newcommand{\photon}{\mathrm{ph}}
 
 % Document
 \begin{document}
@@ -81,7 +86,7 @@
 
 \begin{minipage}{0.93\textwidth}
   \begin{abstract}
-  This report is about finding the TeV sources and molecular clouds associated with such sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report and making the conclusions.
+  This report is about finding possible source candidates for HESS J1632-479, HESS J1634-472 and HESS J1640-465 through studying molecular clouds towards these sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report, before describing the methods used in analysing the data, 
   \end{abstract}
 \end{minipage}
 
@@ -94,15 +99,7 @@ TeV gamma-ray sources are among the most energetic sources known to exist in the
 
 \section{Theory}
 \paragraph{}
-Theory stuff goes in here, including but not limited to:
-\begin{itemize}
-  \item Cosmic ray sources
-  \item Large molecular clouds, and their interactions with CRs
-  \item CO \& \elem{13}{CO} as tracers
-  \item Telescope information/general data stuff?
-  \item Galactic rotation/Doppler shift in Mopra data
-\end{itemize}
-Fun! These titles are all outdated! We won't use these!
+This report deals with many different astrophysical concepts in its analysis and such. In order to gain a more complete understanding of the work being done, this section aims to outline them. Due to the large array of different energy schemes present in analysing TeV gamma-rays, data from different telescopes and observatories were used in producing an analysis of the results. Data from different energy regimes was required due to the large collection of possible cosmic ray sources that could result in gamma-ray emission at the TeV scale. I'm trying to list the different topics in sentence-form, but I'm not sure if it's working out or not. It probably isn't.
 
 \subsection{Featured telescopes}
 \paragraph{}
@@ -119,11 +116,11 @@ First, you must spread a thick layer of peanut butter onto the white part of a s
 \subsection{Galactic rotation}
 \label{sec:gal-rot}
 \paragraph{}
-The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on objects along the line of sight across the Milky Way. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. As derived in Appendix~\ref{app:doppler}, the velocity of an object along the line of sight with galactic latitude \(l\) is given by
+The Mopra data featured heavily in this report \parencite{Burton:2013} derives its usefulness from the effect that galactic rotation has on objects along the line of sight across the Milky Way. Fig.~\ref{fig:gal-rot} shows how for a simplified model of the Milky Way with constant radial velocity, looking along a line of sight, in this particular instance one corresponding to a galactic latitude of \(l=337\), leads to a velocity gradient and a measurable Doppler shift. In order to find distances from the sun using the Mopra data, it is necessary to consider the component of velocity parallel to the line of sight. It is also worth noting that the Mopra data measures velocity with respect to the local standard of rest (LSR). As derived in Appendix~\ref{app:doppler}, the velocity of an object along the line of sight with galactic latitude \(l\) is given by
 \begin{equation}
   v_{los}(d)=\frac{v(R)R_0\sin{l}}{\sqrt{d^2-2R_0d\cos{l}+R_0^2}}-v(R_0)\sin{l}\;\,,
 \end{equation}
-where the distance from the sun to the galactic centre (GC) is \(R_0\), and distance from the sun to the object of interest is \(d\). This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance \(R\) from the GC. For the sake of simplicity in this report, this expression is taken to be a constant \(v(R)=\unit{220}{\kilo\metre\usk\reciprocal\second}\), as suggested by \textcite{Kerr:1986}. They also suggest a value for the distance from the GC to be \(R_0=\unit{8.5}{\kilo\parsec}\).
+where the distance from the LSR to the galactic centre (GC) is \(R_0\), and distance from the LSR to the object of interest is \(d\). This equation holds for a galaxy with variable rotation \(v(R)\) dependent on radial distance \(R\) from the GC. For the sake of simplicity in this report, this expression is taken to be a constant \(v(R)=\unit{255.2}{\kilo\metre\usk\reciprocal\second}\), as suggested by recent very-long-baseline interferometry carried out by \textcite{Reid:2014}. They also suggest a value for the distance from the GC to be \(R_0=\unit{8.36}{\kilo\parsec}\).
 
 \begin{figure}[H]
   \centering
@@ -193,13 +190,13 @@ Fig.~\ref{fig:bubble34} shows the formation of a bubble around IGR J16358-4726, 
 
 \subsection{Carbon monoxide clouds}
 \paragraph{}
-TO DO
+The \elem{12}{C}O and \elem{13}{C}O data cubes from Mopra were analysed slice-by-slice, with any interesting regions of gas recorded in Table~\ref{tab:mopra-obs}. The general approach to analysing the molecular gas clouds was to check for any potential line-up with the HESS gamma ray sources, as well as any bubble structures or other line-up with high energy sources. The high-energy sources considered during analysis were pulsars, supernova remnants, Wolf-Rayet stars, and O, B and A stars, with masers serving as good pointers for star-forming regions.
 
-Talk about the use of \elem{12}{C}O to find areas of bulk cloud structures, as well as \elem{13}{C}O to confirm these areas. It would also be worth a bit of discussion about where the CO clouds were located in general, I guess? What sorts of analysis did we really do on these clouds except finding areas of cloud line-up with various sources and/or other data sets. Could be worth putting a table in here like that on the docs just listing the observations made of the Mopra data. That sounds like an excellent idea, Harry. That'll go into an appendix for sure if I can't find out a way of making tables or figures in general span multiple columns. Look into using the \texttt{wrapfig} package maybe?
+As well as data from HESS, the Mopra data cubes were also compared against contours from ROSAT and Spitzer to explore the soft x-ray and infrared regime as well for possible indicators as to what regions the CO clouds could correspond to. Any line-up with Spitzer would imply a dense star-forming region, but no line-up was found for ROSAT data.
 
 \section{Source candidates}
 \paragraph{}
-During the analysis of CO data from Mopra, as well as using the SIMBAD catalogue to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed alongside their possible effect on the gamma-ray emission measured from HESS. Also, when are we going to chuck in various energy fluxes measured from the HESS sources, should those go in the part before the source candidates are listed for each source? I'll slap 'em in beforehand, yeah.
+During the analysis of CO data from Mopra, as well as using the SIMBAD catalogue to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed alongside their possible effect on the gamma-ray emission measured from HESS.
 
 \subsection{HESS J1632-479}
 
@@ -211,15 +208,23 @@ During the analysis of CO data from Mopra, as well as using the SIMBAD catalogue
 \end{figure}
 
 \paragraph{}
-Words about the gamma-ray source in question, and its possible source candidates goes here. The source candidates for this particular gamma-ray source include a Wolf-Rayet cluster, VVV CL074, and just Wolf-Rayet stars in general around the area. Probably not the pulsar or SNR, but I'll chuck in a discussion of the two anyway for more words and all that. Also, because anything's worth discussing when the possible source of these gamma-rays is so mysterious and spoopy.
+HESS J1634-479 has a photon flux of \unit{28.7\pm5.3\e{-12}}{\photon\usk\centi\metre\rpsquared\usk\reciprocal\second} for energies over \unit{200}{\giga\electronvolt} \parencite{Aharonian:2006}. The source candidates for this particular gamma-ray source include a gamma ray source, 2FGL J1632.4-4753c, a Wolf-Rayet cluster, VVV CL074, as well as a high-mass x-ray binary, IGR J16320-4751.
+
+\subsubsection{2FGL J1632.4-4753c}
+\paragraph{}
+The most likely candidate for this source would be 2FGL J1632.4-4753c, which is a gamma ray source found by \textcite{Lande:2012}. It is the most energetic of the possible candidates, with an integral flux of \unit{1.4\e{-9}}{\photon\usk\centi\metre\rpsquared\usk\reciprocal\second} \parencite{Lande:2012}. As the distance to this source is unknown, the intrinsic flux associated with it cannot be found, yet it suffices to know that this figure is for photons with energy \(>\unit{10}{\giga\electronvolt}\) meaning it is a very energetic source. \textcite{Lande:2012} also cites the counterpart for this source to be HESS J1632-479, suggesting a strong link between the two sources.
 
 \subsubsection{VVV CL074}
 \paragraph{}
-An object worthy of attention within this source is VVV CL074, a Wolf-Rayet open star cluster discovered by \textcite{Chene:2013}, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star (WR*) with prominent nitrogen lines in its spectra, or an O-type star with interesting spectral lines in it as well. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \(\unit{6.8}{\kilo\parsec}\). This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so it would seem to be an O-type star.
+An object worthy of attention within this source is VVV CL074, a Wolf-Rayet open star cluster discovered by \textcite{Chene:2013}, which could be contributing to the total gamma ray emission. Worth noting is that in this open cluster one star in particular, VVV CL074 9, is given by \textcite{Chene:2013} to be at a distance of \unit{13.57}{\kilo\parsec}, while other stars in the cluster are within a distance of \unit{8}{\kilo\parsec}. This star in particular has a spectral class of WN7/O4–6If+ \parencite{Chene:2013}, giving it the possibility of it being either a Wolf-Rayet star (WR*) with prominent nitrogen lines in its spectra, or an O-type star with interesting spectral lines in it as well. \textcite{Chene:2013} also mentions that if it were an O-type star then it would only be at a distance of \unit{6.8}{\kilo\parsec}. This suggests that it would be a very energetic Wolf-Rayet star, just at a very large distance so it would seem to be an O-type star.
 
-Another intersting star is VVV CL074 3, with spectral classification WN8. What makes this star interesting lies in a paper by \textcite{Foellmi:2002}, which suggests that WR* of spectral type WN8 could be exotic Thorne-Zytkow objects. These objects are formed in binary systems where one companion star goes supernova, leaving a neutron star or blackhole behind. Due to the close proximity of the two stars, and the inherent `kick' given to the projenitor star after going supernovae, this could push the two objects into each other, undergoing a merge event where the companion star now contains the neutron star or blackhole, forcing it to expand. These sorts of objects could be a source of high energy particles or something of the ilk.
+Another intersting star is VVV CL074 3, with spectral classification WN8. What makes this star interesting lies in a paper by \textcite{Foellmi:2002}, which suggests that WR* of spectral type WN8 could be exotic Thorne-Zytkow objects. These objects are formed in binary systems where one companion star goes supernova, leaving a neutron star or blackhole behind. Due to the close proximity of the two stars, and the inherent `kick' given to the projenitor star after going supernovae, this could push the two objects into each other, undergoing a merge event where the companion star now contains the neutron star or blackhole, forcing it to expand. These sorts of objects could potentially be a source of high energy x-rays, and could serve as cosmic ray accelerators as well.
 
-As a whole, the cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \(\unit{6}{\kilo\parsec}\), meaning it is massive and also far away, so energy comes streaming out of it somehow. It's interesting enough to mention. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster. It's a pretty small cluster in terms of angular size, but hey, things to do, people to meat.
+As a whole, the cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \unit{6}{\kilo\parsec}. No molecular clouds are present at this distance as seen by Mopra, most likely due to the large stellar winds that would be present in a cluster consisting of WR*. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster.
+
+\subsubsection{IGR J16320-4751}
+\paragraph{}
+IGR J16320-4751 is a high-mass x-ray binary positionally coincident with the gamma-ray source \parencite{Aharonian:2006}, and is not shown by SIMBAD in Fig~\ref{fig:hess32}. This means it is a binary system comprising of a high-mass star and a pulsar, where matter from the `donor' star is being accreted onto the pulsar, emitting hard x-rays as a result. It was found by \textcite{Lutovinov:2013} to have a distance of \unit{3.5}{\kilo\parsec}. There is no CO signal near this source using the Mopra data, which agrees with the very energetic nature of the object, as large stellar winds would blow back molecular clouds. This would also suggest the source has been present for some time for there to be no residual molecular clouds nearby. \textcite{Lutovinov:2013} also found the spectral class of the binary system to be O8I, which indicates the donor star in this system is a very massive O-type star. Although this source is very energetic, with a flux of \unit{2.995\e{35}}{\erg\usk\reciprocal\second} between \unit{17-60}{\kilo\electronvolt}, it is not emitting in the right energy band to provide the energetics seen in HESS J1632-479.
 
 \subsection{HESS J1634-472}
 \label{sec:hess34}
@@ -269,6 +274,45 @@ Bitch, we concluding now, making the statements that make a conclusion possible 
 
 \newpage
 
+\begin{table}[H]
+\centering
+\caption{Observations made using Mopra \elem{12}{C}O and \elem{13}{C}O data cubes}
+\vspace{1em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l *{5}{c} p{5cm}}
+\hline \hline
+System         & \(l\) (J2000) & \(b\) (J2000) & \(z_1\) \((\metre\usk\reciprocal\second)\) & \(z_2\) \((\metre\usk\reciprocal\second)\) & \elem{x}{C}O & Notes \\
+\hline
+Pulsar          & 336.91 &  0.055  & -120753  & -117072  & 12 & 
+                Tenuous cloud hovering around PSR J1635-4735, but no obvious bubble \\
+Pulsar          & 337.14 &  0.020  & -114882  & -117072  & 12/13 & 
+                Sharp gradient, possible SNR interaction? [KRL2007b] 194, SNR G337.2+00.1, 2MASS J16355116-4719515 \\
+Star            & 336.43 & -0.262  & -92488.2 & -85430.7 & 13 & 
+                Strong cloud correlation in 13CO to masers below galactic plane \\
+Pulsar/Star     & 336.36 & -0.137  & -83047.6 & -78648.2 & 13 & 
+                Activity in 13CO focused around masers and another A-type star HD 330913. Also, perhaps related to pulsar PSR J1633-4805 \\
+X-ray           & 336.88 &  0.120  & -82811.4 & -75713.9 & 12 & 
+                Cloud hovering below x-ray emission \\
+Maser/Pulsar    & 336.84 &  0.014  & -82548.6 & -68353.5 & 12 & 
+                Sharp gradient around PSR J1635-4735 \\
+Pulsar          & 337.10 & -0.088  & -78605.5 & -74662.4 & 12 & 
+                Nebulous cloud around [KRL2007b] 194, could be other side of jet? PSR J1637-4721 \\
+SNR/Pulsar      & 337.21 &  0.055  & -75012.9 &  -63096  & 12 & 
+                Steep gradient around SNR G337.2+00.1 Combinations from [KRL2007b] 194, 2MASS J16355116-4719515, 2MASS J16354434-4719422 ? \\
+WR*             & 336.30 &  0.200  & -49868.3 & -44918.9 & 13 & 
+                Active 13CO cloud presence with correlation to band of WR stars ? \\
+WR*             & 336.55 &  0.160  & -42352.6 & -40519.5 & 13 & 
+                13CO activity near WR stars {2MASS J16324979-4744314} {2MASS J16324808-4744493} \\
+WR*/Pulsar      & 337.20 &  0.400  & -46660.2 &  -40336  & 13 & 
+                Possible bubble and jets, could be from WR star {2MASS J16345746-4704129}. Nearby pulsar {PSR J1637-4642} may have single jet coincidentally extending until -39419.4 \\
+SNR/Pulsar      & 338.48 &  0.020  &  -43994  & -36458.3 & 12/13 & 
+                Massive gradient near B9IV star, HD 328664. In 13CO there is a strong suggestion of a bubble relating the activity to SNR G338.5+00.1! Suspect also to be the cause of surrounding masers \\
+\hline
+\end{tabular*}
+\label{tab:mopra-obs}
+\end{table}
+
+\newpage
+
 \appendix
 
 \section{Derivation of galactic doppler shift}
@@ -315,9 +359,9 @@ In order to compute distances for a given velocity, the above equation can be re
   d=R_0\left(\cos{l}\pm|\sin{l}|\sqrt{v_{rel}^2-1}\right)\;,
   \label{eq:d}
 \end{equation}
-where \(v_{rel}\) is `relative' velocity, given by
+where \(v_{rel}\) is defined to be `relative' velocity,
 \begin{equation}
-  v_{rel}=\frac{v(R)}{v_{los}+v(R_0)\sin{l}}\;\,.
+  v_{rel}\equiv\frac{v(R)}{v_{los}+v(R_0)\sin{l}}\;\,.
 \end{equation}
 
 \section{Derivation of kinetic energy of expanding bubble}
