@@ -148,6 +148,7 @@ Powerful events in GMCs -- such as supernovae -- can push away all nearby gas, c
 
 The Mopra data cubes provide redshift speeds for each image slice, hence permitting us to find the relative speeds of two areas of gas, such as the two sides of an expanding bubble. For the full derivation please see Appendix~\ref{app:kinetic}, however the final result is replicated here:
 \begin{equation}
+  \label{eq:KE}
   \mathrm{KE} = \frac{\pi ^ 4}{6} {\left( \frac{\Delta l}{360} \right)}^3 \rho d^3 {(v_1 - v_2)}^2 \, \joule \, ,
 \end{equation}
 where \(\Delta l\) is the maximum angular width of the bubble in degrees, \(\rho\) is an estimate of the mass density in \(\kilo\gram\usk\centi\metre\rpcubed\) of the gas previously occupying that volume, \(d\) is the distance to the centre of the bubble in \(\centi\metre\), and \(v_1\) and \(v_2\) are the redshift speeds of the front and back of the bubble in \(\metre\usk\reciprocal\second\).
@@ -176,7 +177,17 @@ A vital aspect of the analysis of data from HESS, Mopra, and other data sources 
 \paragraph{}
 Several gas clouds have formations highly suggestive of bubbles formed due to supernova explosions. Using the techniques outlined in Section~\ref{sec:kinetic}, we subsequently calculate the energies of those bubbles.
 
-(Two figures for distance of the main IGR object: 5-6 and 12-13, cite \parencite{Lutovinov:2005})
+\subsubsection{IGR J16358-4726}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width = \columnwidth]{figures/bubble34}
+  \caption{Composite image of three frames best illustrating the bubble around IGR J16358-4726. The dashed contours are behind (lower left) and in front of (upper right) the solid central ones}
+  \label{fig:bubble34}
+\end{figure}
+
+\paragraph{}
+Fig.~\ref{fig:bubble34} shows the formation of a bubble around IGR J16358-4726, discussed further in Section~\ref{sec:hess34}. Applying Eq.~\ref{eq:d} for \(v(R) = v(R_0) = \unit{255.2\e{3}}{\metre\usk\reciprocal\second}\) and \(R_0 = \unit{8.34}{\kilo\parsec}\) \parencite{Reid:2014}, we find the central object to be either \(4.18\) or \unit{11.2}{\kilo\parsec} away, which agrees quite favourably with \textcite{Lutovinov:2005} who report near and far solutions for distance equal to \(5 - 6\) and \unit{12 - 13}{\kilo\parsec}, respectively. With these distances, we use Eq.~\ref{eq:KE} and assume an average uniform mass density \(\rho\) of \unit{2\e{-21 \mathrm{~to~} -23}}{\kilo\gram\usk\centi\metre\rpcubed} \parencite{Ferriere:2001} to find the bubble has kinetic energy \unit{9.34\e{42 \mathrm{~to~} 44}}{\joule} for the near solution and \unit{1.78\e{44 \mathrm{~to~} 46}}{\joule} for the far solution. Considering the average energy output of a supernova is of the order of \unit{10^{44}}{\joule} \parencite{Khokhlov:1993}, this is a very reasonable result.
 
 \subsection{Carbon monoxide clouds}
 \paragraph{}
@@ -207,6 +218,7 @@ Another intersting star is VVV CL074 3, with spectral classification WN8. What m
 As a whole, the cluster has an estimated mass of over \unit{2500}{\smass} with a distance of \(\unit{6}{\kilo\parsec}\), meaning it is massive and also far away, so energy comes streaming out of it somehow. It's interesting enough to mention. Fig.~\ref{fig:hess32} shows where the bulk of these WR* are located in the cluster. It's a pretty small cluster in terms of angular size, but hey, things to do, people to meat.
 
 \subsection{HESS J1634-472}
+\label{sec:hess34}
 
 \begin{figure}[H]
   \centering
@@ -295,6 +307,7 @@ This expression only yields the absolute motion in the galaxy, and it is easy to
 In order to compute distances for a given velocity, the above equation can be rearranged to give
 \begin{equation}
   d=R_0\left(\cos{l}\pm|\sin{l}|\sqrt{v_{rel}^2-1}\right)\;,
+  \label{eq:d}
 \end{equation}
 where \(v_{rel}\) is `relative' velocity, given by
 \begin{equation}
@@ -318,7 +331,7 @@ The volume \(V\) of the bubble is given by its radius, hence,
 \end{equation} \begin{equation}
   \mathrm{KE} = \frac{1}{6} \pi \rho r^3 {(v_1 - v_2)}^2  \, .
 \end{equation}
-To find the radius of the bubble, we first determine the image slice which is halfway between the front and back slices of the bubble, ideally giving us a view of the bubble's cross section at the centre. Using the formula outlined at the end of Appendix~\ref{app:doppler}, we can find the distance \(d\) to this slice. Now, consider a circle of radius \(d\) with its origin centred on the Solar System. This circle has a circumference of \(l = 2 \pi d\), and passes through all objects which are located a distance \(d\) away from us, including the middle of our chosen bubble. If we measure the angular width \(\Delta l\) of the bubble in degrees, then by a simple ratio the bubble has diameter \(\frac{\Delta l}{360}l\). Note this is diameter and not radius, so to get \(r\) we then halve this result. Thus,
+To find the radius of the bubble, we first determine the image slice which is halfway between the front and back slices of the bubble, ideally giving us a view of the bubble's cross section at the centre. Using Eq.~\ref{eq:d} outlined at the end of Appendix~\ref{app:doppler}, we can find the distance \(d\) to this slice. Now, consider a circle of radius \(d\) with its origin centred on the Solar System. This circle has a circumference of \(l = 2 \pi d\), and passes through all objects which are located a distance \(d\) away from us, including the middle of our chosen bubble. If we measure the angular width \(\Delta l\) of the bubble in degrees, then by a simple ratio the bubble has diameter \(\frac{\Delta l}{360}l\). Note this is diameter and not radius, so to get \(r\) we then halve this result. Thus,
 \begin{equation}
   \mathrm{KE} = \frac{1}{6} \pi \rho {\left( \frac{1}{2} \frac{\Delta l}{360} 2 \pi d \right)}^3 {(v_1 - v_2)}^2  \, ,
 \end{equation}
