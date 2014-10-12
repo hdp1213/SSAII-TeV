@@ -1,0 +1,20 @@
+﻿# Use this doc to add ignore patterns for files you don't want going into the remote repo
+# Look up how to use "glob patterns" for instructions. They're similar to regular expressions
+
+########
+
+# Sublime Text 2
+*.sublime-*
+
+# Typical compilations
+build/
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.run.xml
