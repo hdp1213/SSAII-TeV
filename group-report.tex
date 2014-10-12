@@ -85,7 +85,7 @@
 \vspace{1.5em}
 
 \begin{minipage}{0.93\textwidth}
-  \begin{abstract}
+  \begin{abstract} % finish properly
   This report is about finding possible source candidates for HESS J1632-479, HESS J1634-472 and HESS J1640-465 through studying molecular clouds towards these sources. It beings with a brief overview of the types of physical and astronomical concepts behind the science that has been used in writing up the report, before describing the methods used in analysing the data, 
   \end{abstract}
 \end{minipage}
@@ -93,11 +93,11 @@
 \vspace{1em}
 
 \begin{multicols}{2}
-\section{Introduction}
+\section{Introduction} % finish properly
 \paragraph{}
 TeV gamma-ray sources are among the most energetic sources known to exist in the [galaxy/universe/multiverse]. They are theorised to arise from cosmic ray sources (CITE-REF)
 
-\section{Theory}
+\section{Theory} % finish properly
 \paragraph{}
 This report deals with many different astrophysical concepts in its analysis and such. In order to gain a more complete understanding of the work being done, this section aims to outline them. Due to the large array of different energy schemes present in analysing TeV gamma-rays, data from different telescopes and observatories were used in producing an analysis of the results. Data from different energy regimes was required due to the large collection of possible cosmic ray sources that could result in gamma-ray emission at the TeV scale. I'm trying to list the different topics in sentence-form, but I'm not sure if it's working out or not. It probably isn't.
 
@@ -107,11 +107,7 @@ The HESS Cherenkov Telescope system is a telescope array that detects high energ
 
 \subsection{Cosmic ray sources}
 \paragraph{}
-TO DO
-
-Whoa! Need a whole lot of words right here very quickly. Okay let's see um.
-
-First, you must spread a thick layer of peanut butter onto the white part of a slice of bread. You can only spread the peanut butter on the white part, and the white part only. You may only spread peanut butter on one side. Spreading peanut butter on both sides will provide an inferior sandwich. Next, you must spread a thick layer of jam onto the white part of a slice of bread. You can only spread the jam on the white part, and the white part only. You may only spread jam on one side. Spreading jam on both sides will provide an inferior sandwich. You cannot spread jam onto the same slice of bread onto which you have spread peanut butter. Also, you cannot spread peanut butter or jam onto more than one slice of bread, as this will provide an undesired excess of either ingredient. Additionally, only peanut butter and jam can be spread onto these slices of bread; no other ingredient will suffice, and no substitute can be used in a sandwich that is to be legitimately recognized as a peanut butter and jam sandwich. Likewise, only bread may be the substance upon which the peanut butter and jam are spread, as anything else does not fit the standards of a peanut butter and jam sandwich; if the peanut butter and jam are spread onto a culinary medium that isn’t bread, the meal at hand simply is not a peanut butter and jam sandwich. Once you have accomplished spreading a thin layer of peanut butter onto the white of one side of one slice of bread, and likewise has been accomplished using raspberry jam on a separate slice of bread, you must match the slices of bread up to each other, forming a peanut butter and jam sandwich. In this scenario, the peanut butter-covered face of bread must be facing the jam-covered face of the second slice of bread so that the peanut butter surface touched the surface of the jam. The surface of the peanut butter is not allowed to touch a jam-less substance of bread, resulting in the jam facing outwards, and likewise applies to the jam. If a substance is found facing on the outside of the sandwich, the product will not be accepted as a peanut butter and jam sandwich. The side with peanut butter and the side with jam on it must match up and stick together to form one solid sandwich. When the eater picks up the sandwich, he or she must hold both pieces of bread at the same time, or else one slice will fall off, and eating only one slice of bread will not be recognized as the same or even similar to eating a peanut butter and jam sandwich.
+Cosmic rays are highly-relativistic charged particles 
 
 \subsection{Galactic rotation}
 \label{sec:gal-rot}
@@ -157,13 +153,15 @@ where \(\Delta l\) is the maximum angular width of the bubble in degrees, \(\rho
 \paragraph{}
 The majority of the hydrogen in the galaxy is in either atomic or molecular form. Atomic hydrogen can emit a photon because of the energy difference between the electron and proton having parallel and anti-parallel spins. This spin transition for the electron results in the emission of a photon with a wavelength of \unit{21}{\centi\metre}. Molecular hydrogen (\molec{H}{2}) has very weak emission lines due to its high symmetry, and at the extremely low molecular cloud temperatures of \(\sim\)\unit{10}{\kelvin}, molecular hydrogen is completely undetectable. Thankfully, carbon monoxide (CO) is asymmetric and occurs alongside \molec{H}{2} in a mostly uniform ratio throughout our galaxy \parencite{Neininger:1998}. The CO is hit by neighbouring molecules and gains energy in either rotational or vibrational stretching forms. These energy modes are quantised, and when the rotation or vibration drops an energy level a photon will be emitted. Because each isotopologue will have a different moment of inertia and therefore different energy levels, the frequency of the photon will depend on both the isotopologue and the energy levels between which the transition occurs. Because of this it is possible to look for specific isotopologues and specific energy transitions, which, knowing how they are distributed with \molec{H}{2}, allows the mapping of molecular clouds.
 
-\section{Data analysis}
+\section{Data analysis} % finish properly ? add more maybe
 \paragraph{}
 In this section, analytical techniques such as noise analysis, kinematic analysis and analysis of the Mopra CO data are outlined and discussed.
 
 \subsection{Noise analysis}
 \paragraph{}
-A vital aspect of the analysis of data from HESS, Mopra, and other data sources involved estimating the level of background noise associated with each data set, and making judgements regarding the cut-off level where the data became valid signal. Fig.~\ref{fig:noise} shows a schematic idealisation of the histograms for the data sets used in the report. In order to plot accurate contours of gas clouds, and hence properly analyse them, the levels had to be set so that background counts were effectively removed. Each data set has already had a defined number of background counts subtracted from it, thus leading to the existence of points with negative numbers of counts. This in turn meant the formation of an associated background count roughly distributed as a Gaussian curve due to its random nature, as seen in Fig.~\ref{fig:noise}. In order to only plot contours on values considered to be signal, and correctly ignore the background noise, we considered the standard deviation \(\sigma\) of the background. As we expected the number of counts for the signal to be in the positive domain, we focused on the negative side of the histogram and used it to estimate the value of the standard deviation \(\sigma\) in the background noise, using the approximate ``bell curve'' present in the negative domain. In order to be more certain that only the signal was then considered, the value for \(\sigma\) was doubled, and this used as the lower contour limit. Thus, for the normally-distributed background noise, only 2.3\% of the noise would be included in the statistically-significant contour levels. This allowed further analyses on the sources to clearly identify the signal from the noise, and hence have much stronger accuracy.
+A vital aspect of the analysis of data from HESS, Mopra, and other data sources involved estimating the level of background noise associated with each data set, and making judgements regarding the cut-off level where the data became valid signal. Before noise analysis was done proper, it was made sure that for each data set, a Gaussian smoothing of three pixels was applied in order to smooth over any random noise effects present in the data.
+
+Fig.~\ref{fig:noise} shows a schematic idealisation of the histograms for the data sets used in the report. In order to plot accurate contours of gas clouds, and hence properly analyse them, the levels had to be set so that background counts were effectively removed. Each data set has already had a defined number of background counts subtracted from it, thus leading to the existence of points with negative numbers of counts. This in turn meant the formation of an associated background count roughly distributed as a Gaussian curve due to its random nature, as seen in Fig.~\ref{fig:noise}. In order to only plot contours on values considered to be signal, and correctly ignore the background noise, we considered the standard deviation \(\sigma\) of the background. As we expected the number of counts for the signal to be in the positive domain, we focused on the negative side of the histogram and used it to estimate the value of the standard deviation \(\sigma\) in the background noise, using the approximate ``bell curve'' present in the negative domain. In order to be more certain that only the signal was then considered, the value for \(\sigma\) was doubled, and this used as the lower contour limit. Thus, for the normally-distributed background noise, only 2.3\% of the noise would be included in the statistically-significant contour levels. This allowed further analyses on the sources to clearly identify the signal from the noise, and hence have much stronger accuracy.
 
 \begin{figure}[H]
   \centering
@@ -194,7 +192,7 @@ The \elem{12}{C}O and \elem{13}{C}O data cubes from Mopra were analysed slice-by
 
 As well as data from HESS, the Mopra data cubes were also compared against contours from ROSAT and Spitzer to explore the soft x-ray and infrared regime as well for possible indicators as to what regions the CO clouds could correspond to. Any line-up with Spitzer would imply a dense star-forming region, but no line-up was found for ROSAT data.
 
-\section{Source candidates}
+\section{Source candidates} % finish properly
 \paragraph{}
 During the analysis of CO data from Mopra, as well as using the SIMBAD catalogue to plot high-energy sources, a few were set aside as possible candidates for the large gamma ray readings from HESS. In this section, the sources are discussed alongside their possible effect on the gamma-ray emission measured from HESS.
 
@@ -263,7 +261,7 @@ TO DO
 
 Possible sources for this gamma ray source. Kyle get your butt in here with that paper that answers this question. Yay, free research.
 
-\section{Conclusions}
+\section{Conclusions} % finish properly
 \paragraph{}
 TO DO
 
@@ -271,45 +269,6 @@ Bitch, we concluding now, making the statements that make a conclusion possible 
 \end{multicols}
 
 \printbibliography[heading = bibintoc] % Include bibliography entry in ToC
-
-\newpage
-
-\begin{table}[H]
-\centering
-\caption{Observations made using Mopra \elem{12}{C}O and \elem{13}{C}O data cubes}
-\vspace{1em}
-\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l *{5}{c} p{5cm}}
-\hline \hline
-System         & \(l\) (J2000) & \(b\) (J2000) & \(z_1\) \((\metre\usk\reciprocal\second)\) & \(z_2\) \((\metre\usk\reciprocal\second)\) & \elem{x}{C}O & Notes \\
-\hline
-Pulsar          & 336.91 &  0.055  & -120753  & -117072  & 12 & 
-                Tenuous cloud hovering around PSR J1635-4735, but no obvious bubble \\
-Pulsar          & 337.14 &  0.020  & -114882  & -117072  & 12/13 & 
-                Sharp gradient, possible SNR interaction? [KRL2007b] 194, SNR G337.2+00.1, 2MASS J16355116-4719515 \\
-Star            & 336.43 & -0.262  & -92488.2 & -85430.7 & 13 & 
-                Strong cloud correlation in 13CO to masers below galactic plane \\
-Pulsar/Star     & 336.36 & -0.137  & -83047.6 & -78648.2 & 13 & 
-                Activity in 13CO focused around masers and another A-type star HD 330913. Also, perhaps related to pulsar PSR J1633-4805 \\
-X-ray           & 336.88 &  0.120  & -82811.4 & -75713.9 & 12 & 
-                Cloud hovering below x-ray emission \\
-Maser/Pulsar    & 336.84 &  0.014  & -82548.6 & -68353.5 & 12 & 
-                Sharp gradient around PSR J1635-4735 \\
-Pulsar          & 337.10 & -0.088  & -78605.5 & -74662.4 & 12 & 
-                Nebulous cloud around [KRL2007b] 194, could be other side of jet? PSR J1637-4721 \\
-SNR/Pulsar      & 337.21 &  0.055  & -75012.9 &  -63096  & 12 & 
-                Steep gradient around SNR G337.2+00.1 Combinations from [KRL2007b] 194, 2MASS J16355116-4719515, 2MASS J16354434-4719422 ? \\
-WR*             & 336.30 &  0.200  & -49868.3 & -44918.9 & 13 & 
-                Active 13CO cloud presence with correlation to band of WR stars ? \\
-WR*             & 336.55 &  0.160  & -42352.6 & -40519.5 & 13 & 
-                13CO activity near WR stars {2MASS J16324979-4744314} {2MASS J16324808-4744493} \\
-WR*/Pulsar      & 337.20 &  0.400  & -46660.2 &  -40336  & 13 & 
-                Possible bubble and jets, could be from WR star {2MASS J16345746-4704129}. Nearby pulsar {PSR J1637-4642} may have single jet coincidentally extending until -39419.4 \\
-SNR/Pulsar      & 338.48 &  0.020  &  -43994  & -36458.3 & 12/13 & 
-                Massive gradient near B9IV star, HD 328664. In 13CO there is a strong suggestion of a bubble relating the activity to SNR G338.5+00.1! Suspect also to be the cause of surrounding masers \\
-\hline
-\end{tabular*}
-\label{tab:mopra-obs}
-\end{table}
 
 \newpage
 
@@ -390,5 +349,46 @@ and we rearrange to get our final result:
   \mathrm{KE} = \frac{\pi ^ 4}{6} {\left( \frac{\Delta l}{360} \right)}^3 \rho d^3 {(v_1 - v_2)}^2 \, .
 \end{equation}
 
+\newpage
+
+\section{Observation table for Mopra \elem{12}{C}O and \elem{13}{C}O data cubes} \label{app:obs-table}
+\begin{table}[H]
+\centering
+\caption{Observations made using Mopra \elem{12}{C}O and \elem{13}{C}O data cubes}
+\vspace{1em}
+\begin{tabular*}{\textwidth}{@{\extracolsep{\fill} } l *{5}{c} p{5cm}}
+\hline \hline
+System         & \(l\) (J2000) & \(b\) (J2000) & \(z_1\) \((\metre\usk\reciprocal\second)\) & \(z_2\) \((\metre\usk\reciprocal\second)\) & \elem{x}{C}O & Notes \\
+\hline
+Pulsar          & 336.91 &  0.055  & -120753  & -117072  & 12 & 
+                Tenuous cloud hovering around PSR J1635-4735, but no obvious bubble \\
+Pulsar          & 337.14 &  0.020  & -114882  & -117072  & 12/13 & 
+                Sharp gradient, possible SNR interaction? [KRL2007b] 194, SNR G337.2+00.1, 2MASS J16355116-4719515 \\
+Star            & 336.43 & -0.262  & -92488.2 & -85430.7 & 13 & 
+                Strong cloud correlation in 13CO to masers below galactic plane \\
+Pulsar/Star     & 336.36 & -0.137  & -83047.6 & -78648.2 & 13 & 
+                Activity in 13CO focused around masers and another A-type star HD 330913. Also, perhaps related to pulsar PSR J1633-4805 \\
+X-ray           & 336.88 &  0.120  & -82811.4 & -75713.9 & 12 & 
+                Cloud hovering below x-ray emission \\
+Maser/Pulsar    & 336.84 &  0.014  & -82548.6 & -68353.5 & 12 & 
+                Sharp gradient around PSR J1635-4735 \\
+Pulsar          & 337.10 & -0.088  & -78605.5 & -74662.4 & 12 & 
+                Nebulous cloud around [KRL2007b] 194, could be other side of jet? PSR J1637-4721 \\
+SNR/Pulsar      & 337.21 &  0.055  & -75012.9 &  -63096  & 12 & 
+                Steep gradient around SNR G337.2+00.1 Combinations from [KRL2007b] 194, 2MASS J16355116-4719515, 2MASS J16354434-4719422 ? \\
+WR*             & 336.30 &  0.200  & -49868.3 & -44918.9 & 13 & 
+                Active 13CO cloud presence with correlation to band of WR stars ? \\
+WR*             & 336.55 &  0.160  & -42352.6 & -40519.5 & 13 & 
+                13CO activity near WR stars {2MASS J16324979-4744314} {2MASS J16324808-4744493} \\
+WR*/Pulsar      & 337.20 &  0.400  & -46660.2 &  -40336  & 13 & 
+                Possible bubble and jets, could be from WR star {2MASS J16345746-4704129}. Nearby pulsar {PSR J1637-4642} may have single jet coincidentally extending until -39419.4 \\
+SNR/Pulsar      & 338.48 &  0.020  &  -43994  & -36458.3 & 12/13 & 
+                Massive gradient near B9IV star, HD 328664. In 13CO there is a strong suggestion of a bubble relating the activity to SNR G338.5+00.1! Suspect also to be the cause of surrounding masers \\
+\hline
+\end{tabular*}
+\label{tab:mopra-obs}
+\end{table}
+\vspace{-1em}
+{\footnotesize The \(z_1\) and \(z_2\) columns show the doppler shifts of the slices at the beginning and end of each observation in the data cube. The \elem{x}{C}O column shows observations made in either \elem{12}{C}O, \elem{13}{C}O, or both.}
 
 \end{document}
